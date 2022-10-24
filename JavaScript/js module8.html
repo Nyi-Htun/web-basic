@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript Module - 8</title>
+    </head>
+    <body>
+        <h2>Variable Scope</h2>
+        <ul>
+            <li>Global Variable</li>
+            <li>Local Variable</li>
+        </ul>
+
+        <script>
+            // Global Variable
+            var globalVariable = 25;
+
+            // define the function
+            function myFunction1(){
+                //Local variable
+                var localVariable = "Hello";
+                document.write(globalVariable + 
+                " called from inside function<br>");
+                document.write(localVariable +
+                " inside the function<br>");
+            }
+
+            //call the function
+            myFunction1();
+
+            //document.write(localVariable + " from myFunction1()<br>");
+            document.write(globalVariable + " from global variable <br>");
+        </script>
+
+        <h2>Variable Hoisting</h2>
+        <p>variable declaration is always excuted first</p>
+        <script>
+            fruit = "mango";
+            document.write(fruit + "<br>");
+            var fruit; //variable declaration
+
+            // will generate error
+            var fruit2;
+            document.write(fruit2 + " output without initialize");
+            fruit2 = "orange";
+        </script>
+
+        <h2>Strict Mode</h2>
+        <script>
+            "use strict";
+            var text = "This variable is in a strict mode!";
+
+            "use strict";
+            try{
+                StictModeFruit = "mango";
+                // initialize but not declared
+                document.write(StictModeFruit);
+            }catch(err){
+                document.write(err);
+            }
+        </script>
+
+        <h2>Let Statement</h2>
+        <!-- 
+            {
+                let myVar = "Hello";
+                //myVar can be used here
+            }
+
+            //myVar can not be used here
+         -->
+
+         <script>
+            function varTest(){
+                var x = 5;
+                {
+                    var x = 10; // same variable
+                    document.write(x + " var inside block<br>"); // show 10;
+                }
+                document.write(x + " var outside block<br>"); // show 10;
+            }
+
+            function letTest(){
+                let x = 5;
+                {
+                    let x = 10; //samevariable
+                    document.write(x + " let inside block <br>"); // show 10;
+                }
+                document.write(x + " let outside block <br>"); // show 5;
+            }
+
+            varTest();
+            letTest();
+         </script>
+
+         <h2>const Statement</h2>
+         <p>Make a variable constaant</p>
+         <script>
+            try{
+                const constVariable = 10;
+                //const , cannot be canged
+                constVariable = 20;
+            }catch(error){
+                document.write(error);
+            }
+         </script>
+
+    </body>
+</html>

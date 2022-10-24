@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <style type="text/css">
+            /* css for List */
+            #ul-circle{
+                list-style-type: circle;
+            }
+
+            #ul-square{
+                list-style-type: square;
+            }
+
+            #ul-upper-roman{
+                list-style-type: upper-roman;
+            }
+
+            #ol-upper-roman{
+                list-style-type: upper-roman;
+            }
+
+            #ol-lower-alpha{
+                list-style-type: lower-alpha;
+            }
+
+            #no-list-style-type{
+                list-style-type: none;
+            }
+
+            #change-color{
+                list-style-type: none;
+            }
+
+            #change-color{
+                list-style: none;
+                color: brown;
+            }
+
+            #change-color li::after{
+                list-style-type: blue;
+                content: "(*_*)";
+            }
+
+            /* css for Description List */
+            dt{
+                font-weight: bold;
+                text-decoration: underline;
+            }
+
+            dd{
+                font-style: italic;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h2>Unordered List</h2>
+        <p>Fruits</p>
+        <ul>
+            <li>Apples</li>
+            <li>Oranges</li>
+            <li>Grapes</li>
+        </ul>
+
+        <h2>Ordered List</h2>
+        <p>Fruits</p>
+        <ol>
+            <li>Apples</li>
+            <li>Oranges</li>
+            <li>Grapes</li>
+        </ol>
+
+        <h2>Nested Lists</h2>
+        <ul>
+
+            <li>General Data1
+                <ul> 
+                    <li>Specific Data</li>
+                    <li>Specific Data</li>
+                    <li>Specific Data</li>
+                </ul>
+            </li>
+
+            <li>General Data2
+                <ol>
+                    <li>Specific Data</li>
+                    <li>Specific Data</li>
+                    <li>Specific Data</li>
+                </ol>
+            </li>
+
+        </ul>
+
+        <h2>List Style Type Examples</h2>
+
+        <ul id="ul-circle">
+            <li>Datas</li>
+            <li>Some data</li>
+            <li>Datas</li>
+            <li>Some data</li>
+        </ul>
+
+        <ul id="ul-square">
+            <li>Datas</li>
+            <li>Some data</li>
+            <li>Datas</li>
+            <li>Some data</li>
+        </ul>
+
+        <ul id="ul-upper-roman">
+            <li>Datas</li>
+            <li>Some data</li>
+            <li>Datas</li>
+            <li>Some data</li>
+        </ul>
+
+        <ul id="ol-upper-roman">
+            <li>Datas</li>
+            <li>Some data</li>
+            <li>Datas</li>
+            <li>Some data</li>
+        </ul>
+
+        <ul id="ol-lower-alpha">
+            <li>Datas</li>
+            <li>Some data</li>
+            <li>Datas</li>
+            <li>Some data</li>
+        </ul>
+
+        <ul id="no-list-style-type">
+            <li>Datas</li>
+            <li>Some data</li>
+            <li>Datas</li>
+            <li>Some data</li>
+        </ul>
+
+        <ol id="no-list-style-type">
+            <li>Datas</li>
+            <li>Some data</li>
+            <li>Datas</li>
+            <li>Some data</li>
+        </ol>
+
+        <h2>Changing and Coloring Bullets Examples</h2>
+
+        <ul id="change-color">
+            <li>some data</li>
+            <li>some data</li>
+            <li>some data</li>
+            <li>some data</li>
+        </ul>
+
+        <h2>Descripition Lists Examples</h2>
+
+        <dl>
+
+            <dt>dog</dt>
+            <dd>a demisticated meta-eating mammal.</dd>
+
+            <dt>cat</dt>
+            <dd>a small furry mammal kept as a pet.</dd>
+
+            <dt>mouse</dt>
+            <dd>a small rodent with a long tail.</dd>
+
+        </dl>
+
+
+    </body>
+</html>

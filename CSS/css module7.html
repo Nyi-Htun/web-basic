@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS Module - 7</title>
+
+        <!-- google font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">        
+        
+        <style type="text/css">
+
+            .rgba-box{
+                width: 100px;
+                height: 100px;
+                margin: 10px;
+            }
+
+            .box-1{
+                background: rgba(0, 255, 0, 0.0);
+            }
+
+            .box-2{
+                background: rgba(0, 255, 0, 0.2);
+            }
+
+            .box-3{
+                background: rgba(0, 255, 0, 0.4);
+            
+            }
+            .box-4{
+                background: rgba(0, 255, 0, 0.6);
+            }
+
+            .box-5{
+                background: rgba(0, 255, 0, 0.8);
+            }
+
+            .box-6{
+                background: rgba(0, 255, 0, 0.1);
+            }
+
+            .bg-size-demo{
+                width: 500px;
+                height: 300px;
+                background-image: url("simple.jpeg");
+                background-size: cover;
+                /* cover,contain,auto */
+            }
+
+            .bg-origin-demo{
+                color: tomato;
+                width: 500px;
+                height: 300px;
+                border: 1px solid black;
+                padding: 20px;
+                background: url("simplegreen.jpg");
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-origin: content-box;
+            }
+
+            .bg-clip-demo{
+                color: transparent;
+                font-size: 50px;
+                font-weight: bold;
+                text-align: center;
+                width: 500px;
+                height: 300px;
+                border: 5px double black;
+                padding: 20px;
+                background-size: cover;
+                background: url("gh.webp");
+                background-repeat: no-repeat;
+                background-clip: text;
+                -webkit-background-clip: text;
+            }
+
+            /* CSS for Gradients */
+            .linear-gradient1{
+                width: 300px;
+                height: 300px;
+                /* deg , direction , color,.... */
+                background-image: linear-gradient(90deg,violet,blueviolet, blue);
+            }
+
+            .radial-gradient-demo{
+                width: 500px;
+                height: 300px;
+                /* ellipse,circle */
+                background-image: radial-gradient(ellipse at center,white,black);
+            }
+
+            /* CSS for Box-Shadow */
+            .box-shadow-demo{
+                width: 300px;
+                height: 300px;
+                border: 10px solid brown;
+                box-shadow: 10px 10px 10px 10px rgba(13, 4, 4, 0.697);
+            }
+
+            /* CSS for translate */
+            .d-demo{
+                width: 200px;
+                height: 200px;
+                background: lightblue;
+                /* for transition effect */
+                transition-duration: 3s;
+            }
+
+            .translate-demo:hover{
+                transform: translate(30px,40px);
+            }
+
+            /* CSS for rotate */
+            .clockwise:hover{
+                transform: rotate(45deg);
+            }
+
+            .conter-clockwise:hover{
+                transform: rotate(-90deg);
+            }
+
+            /* CSS for scale */
+            .scaled:hover{
+                transform: scale(.5);
+            }
+
+            .scaled-2:hover{
+                transform: scale(2);
+            }
+
+            /* CSS for skew */
+            .skewed:hover{
+                transform: skew(30deg,30deg);
+            }
+
+            .skewed-1:hover{
+                transform: skew(-30deg,-30deg);
+            }
+
+            /* CSS for 3D transform */
+            .rotate-X:hover{
+                transform: rotateX(90deg);
+            }
+
+            .rotate-Y:hover{
+                transform: rotateY(360deg);
+            }
+
+            .rotate-Z:hover{
+                transform: rotateZ(36000deg);
+            }
+
+        </style>
+    </head>
+    <body>
+        <h2>RGBA Colors</h2>
+        <div class="rgba-box box-1"></div>
+        <div class="rgba-box box-2"></div>
+        <div class="rgba-box box-3"></div>
+        <div class="rgba-box box-4"></div>
+        <div class="rgba-box box-5"></div>
+        <div class="rgba-box box-6"></div>
+
+        <h2>Background</h2>
+        <ul>
+            <li>background-size</li>
+            <li>background-origin</li>
+            <li>background-clip</li>
+        </ul>
+
+        <h2>Background-size</h2>
+        <div class="bg-size-demo">
+            Background Size Demo
+        </div>
+
+        <h2>Background-origin</h2>
+        <div class="bg-origin-demo">
+            Background Origin Demo 
+        </div>
+
+        <h2>Background-clip</h2>
+        <div class="bg-clip-demo">
+            Background Clip Demo 
+        </div>
+
+        <h2>Gradiens</h2>
+        <ul>
+            <li>Linear Gradien</li>
+            <li>Radial Gradien</li>
+        </ul>
+
+        <h2>Linear Gradiens</h2>
+        <div class="linear-gradient1"></div>
+
+        <h2>Radial Gradiens</h2>
+        <div class="radial-gradient-demo"></div>
+
+        <h2>Shadow Effects</h2>
+        <ul>
+            <li>text-shadow</li>
+            <li>box-shadow</li>
+        </ul>
+
+        <h2>Text Shadow</h2>
+        <!-- text-shadow: offset-x offset-y blur-radius color -->
+        <p style="text-shadow: 5px 5px 1px indigo;">Text Shadow</p>
+
+        <h2>Box Shadow</h2>
+        <!-- box-shadow: offset-x offset-y blur-radius spread-radius color -->
+        <div class="box-shadow-demo"></div>
+
+        <h2 style="font-family: 'Dancing Script', cursive;">Web FontWeb FontWeb FontWeb Font</h2>
+        <!-- @font-face -->
+
+        <h2>2D Transform</h2>
+        <ul>
+            <li>Translate()</li>
+            <li>TranslateX()</li>
+            <li>TranslateY()</li>
+            <li>rotate()</li>
+            <li>scale()</li>
+            <li>scaleX()</li>
+            <li>scaleY()</li>
+            <li>skewX()</li>
+            <li>skewY()</li>
+        </ul>
+
+        <center>
+
+        <h2>Translate()</h2>
+        <div class="d-demo"></div>
+        <div class="d-demo translate-demo"></div>
+        <div class="d-demo"></div>
+
+        <h2>Rotate</h2>
+        <div class="d-demo clockwise"></div>
+        <div class="d-demo conter-clockwise">conter-clockwise</div>
+
+        <h2>Scale</h2>
+        <div class="d-demo scaled"></div>
+        <div class="d-demo scaled-2"></div>
+
+        <h2>Skew</h2>
+        <div class="d-demo skewed"></div>
+        <div class="d-demo skewed-1"></div>
+
+        </center>
+        <h2>3D Transform</h2>
+        <ul>
+            <li>rotateX()</li>
+            <li>rotateY()</li>
+            <li>rotateZ()</li>
+        </ul>
+
+        <center>
+
+        <h2>RotateX()</h2>
+        <div class="d-demo rotate-X">Rotate-X</div>
+
+        <h2>Rotatey()</h2>
+        <div class="d-demo rotate-Y">Rotate-Y</div>
+
+        <h2>RotateZ()</h2>
+        <div class="d-demo rotate-Z">Rotate-Z</div>
+        
+        </center>
+
+
+    </body>
+</html>

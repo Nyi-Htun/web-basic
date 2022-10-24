@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS Module - 6</title>
+        <style type="text/css">
+
+            /* CSS for decendant combinator */
+            .desc-comb span{
+                color: red;
+            }
+
+            /* CSS for child combinator */
+            .child-comb > span{
+                color: red;
+            }
+
+            /* CSS for adjacent sibling combinator */
+            li#two + li{
+                color: red;
+            }
+
+            /* CSS for general sibling combinator */
+            li#one ~ li{
+                color: red;
+            }
+
+            /* CSS for pseudo class */
+            .hover-sudo:hover{
+                color: red;
+                font-size: 20px;
+            }
+
+            .hover-sudo{
+                transition-duration: .5s;
+            }
+
+            a:link{
+                color: orange;
+            }
+
+            a:visited{
+                color: red;
+            }
+
+            a:hover{
+                color: green;
+            }
+
+            a:active{
+                color: pink;
+            }
+
+            /* CSS for psuedo-elements */
+            .true::after{
+                content: "-> True";
+                color: green;
+            }
+
+            .false::after{
+                content: "-> False";
+                color: red;
+            }
+
+            .true::before{
+                content: " 1 ";
+                color: blue;
+            }
+
+            .false::before{
+                content: " 2 ";
+                color: blueviolet;
+            }
+
+            /* CSS for first letter */
+            .first-letter-psuedo::first-letter{
+                text-decoration: overline;
+                font-size: 250%;
+                color: red;
+            }
+
+            /* CSS for first line */
+            .first-line-psuedo::first-line{
+                color: rgb(241, 70, 99);
+                background-color: rgb(75, 62, 173);
+            }
+
+            /* CSS for selection */
+            p::selection , textarea::selection{
+                color: rgb(241, 241, 243);
+                background-color: rgb(26, 26, 24);
+            }
+
+            /* CSS for Attribute selector */
+            a[title]{
+                color: red;
+            }
+
+            a[title="cssmodule6"]{
+                color: blueviolet;
+            }
+
+            /* CSS for opacity */
+            .opacity-test{
+                /* 0 - 1 */
+                opacity: .4;
+                background-color: rgb(2, 4, 101);
+                width: 200px;
+                height: 200px;
+            }
+
+            .opacity-img{
+                opacity: 0.5;
+                width: 500px;
+                height: 500px;
+            }
+
+            /* CSS for rounded corner */
+            .rounded-corner{
+                width: 100px;
+                height: 100px;
+                border-radius: 50px;
+                padding: 20px;
+                background-color: firebrick;
+            }
+
+            .circle-box{
+                width: 100px;
+                height: 100px;
+                padding: 20px;
+                background-color: greenyellow;
+                border-radius: 100%;
+            }
+
+            /* CSS for border image */
+            #border-image{
+                margin: 10px;
+                width: 250px;
+                height: 150px;
+                border: 14px solid transparent;
+                padding: 15px;
+                border-image: url("gh.webp") round 50;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h2>CSS Combinators</h2>
+        <ul>
+            <li>descendant combinator " "</li>
+            <li>child combinator " > "</li>
+            <li>adjacent sibling combinator " + "</li>
+            <li>general sibling cobinators " ~ "</li>
+        </ul>
+
+        <h2>Decendant Combinator</h2>
+        <div class="desc-comb">
+            <span>I am red</span>
+            <p>Hello World! <span>I am also red</span></p>
+        </div>
+
+        <h2>Child Combinator</h2>
+        <div class="child-comb">
+            <span>I am red</span>
+            <p>Hello World <span>I am not red</span></p>
+            <span>Am I red?</span>
+            <p>No red<span> when in paragraph.</span></p>
+        </div>
+
+        <h2>Adjacent Sibling Combinator</h2>
+        <ul>
+            <li>One</li>
+            <li id="two">Two</li>
+            <li>Three</li>
+            <li>Four</li>
+        </ul>
+
+        <h2>General Sibling Combinator</h2>
+        <ul>
+            <li id="one">One</li>
+            <li>Two</li>
+            <li>Three</li>
+            <li>Four</li>
+        </ul>
+
+        <h2>CSS Pseudo Classes " : "</h2>
+<!-- 
+        selector: Pseudoclass{
+            property : value;
+        } -->
+
+        <p class="hover-sudo">I'm testing with hover Pseudoclass</p>
+        <a href="https://www.google.com" target="_blank">Google</a>
+
+        <h2>Pseudo Elements</h2>
+        <!-- selector:: pseudo-element{
+                property: value;
+            } -->
+        <p class="true">Birds can fly.</p>
+        <p class="false">Monkey can fly.</p>
+
+        <h2>First Letter</h2>
+        <p class="first-letter-psuedo">I'm a paragraph I'm a paragraph I'm a paragraph I'm a paragraph not map iena jdfidga parage</p>
+        <p class="first-line-psuedo">I'mI'm a paragraph I'm a paragraph I'm a paragraph I'm a paragraph </p>
+
+        <h2>Selection</h2>
+        <p>I'm selection psuedo-element paragraph</p>
+        <textarea rows="3" cols="20">I'm a selection psuedo-element textarea</textarea>
+
+        <h2>CSS Attribute Selectors</h2>
+        <p>Go to <a href="https://www.example.com"> Example.com</a></p>
+        <p>Go to <a href="https://www.example.com" title="example"> Example.com</a></p>
+        <p>Go to <a href="https://www.example.com" title="cssmodule6"> Example.com</a></p>
+
+        <h2>CSS  Opacity</h2>
+        <div class="opacity-test">
+        </div>
+        <img src="simplegreen.jpg" class="opacity-img">
+
+        <h2>Round Corner</h2>
+        <div class="rounded-corner">
+            I'm rounded corner box
+        </div>
+
+        <div class="circle-box">
+            I'm circle box
+        </div>
+
+        <h2>Border Images</h2>
+        <br><br>
+        <id id="border-image">
+            I'm border - image box
+        </id>
+
+    </body>
+</html>

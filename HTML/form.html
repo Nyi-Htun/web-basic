@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form Examples</title>
+
+        <style type="text/css">
+            textarea{
+                background-color: aquamarine;
+                color: white;
+                border: none;
+                outline: none;
+                resize: none;
+            }
+        </style>
+    </head>
+    <body>
+
+        <form action="" method="post">
+            <label>Full Name</label><br>
+            <input type="text" name="fullname" placeholder="Full Name"/><br/>
+            <label>Age</label><br>
+            <input type="text" name="age" placeholder="Age"/><br>
+            <label>Favourite Foot</label><br>
+            <input type="text" name="favourite_food" placeholder="Favourite Food"/><br>
+            <label>Hobby</label><br>
+            <input type="text" name="hobby" placeholder="Hobby"/>
+            <br><br>
+            <input type="submit"/>
+        </form>
+    
+        <h2>HTML Input Types</h2>
+
+        <h2> Text</h2>
+        <input type="text" id="text-demo"/><br><br>
+        <button onclick="getTextValue()">Get Value</button>
+
+        <h2>Check Box</h2>
+        <input type="checkbox" id="checkbox-demo"/><br><br>
+        <button onclick="getcheckboxValue()">Get Value</button>
+
+        <h2>Color</h2>
+        <input type="color" id="color-demo"/><br><br>
+        <button onclick="getcolorValue()">Get Value</button>>
+
+        <h2>Datetime Local</h2>
+        <input type="datetime-local" id="datetime-local-demo"/><br><br>
+        <button onclick="getdatetimeLocalValue()">Get Value</button>
+
+        <h2>Email</h2>
+        <p>Try entering an invalid e-mail and submit it.</p>
+        <form action="page-handler.html">
+            <input type="email" id="email-demo"/>
+            <input type="submit"/>
+        </form>
+
+        <h2>File</h2>
+        <input type="file" id="file-demo" onchange="readFile();"/><br><br>
+        <img src="" alt="The image file will be shown here" id="result"/>
+
+        <h2>Hidden</h2>
+        <input type="hidden" value="I'm hidden value" id="hidden-demo"/><br><br>
+        <button onclick="getMonthValue();">Get Value</button>
+
+        <h2>Month</h2>
+        <input type="month" id="month-demo"/><br><br>
+        <button onclick="getHiddenValue();">Get Value</button>
+
+        <h2>Number</h2>
+        <p>Try entering an invalid number</p>
+        <form action="page-handler.html">
+            <input type="number" id="number-demo"/>
+            <input type="submit"/>
+        </form><br><br>
+        <button onclick="getNumberValue();">Get Value</button>
+
+        <h2>Password</h2>
+        <input type="password" id="password-demo"/><br><br>
+        <button onclick="getPasswordValue();">Get Value</button>
+
+        <h2>Radio</h2>
+        <input type="radio" name="gender" value="Male" id="male"/>
+        <label for="male">Male</label>
+        <input type="radio" name="gender" value="Female" id="female"/>
+        <label for="female">Female</label>
+        <br/><br/>
+        <button onclick="getRadioValue();">Get Value</button>
+
+        <h2>Range</h2>
+        <input type="range" id="range-demo"/><br><br>
+        <button onclick="getRangeValue();">Get Value</button>
+
+        <h2>Search</h2>
+        <input type="search" id="search-demo"/><br><br>
+        <button onclick="getsearchValue();">Get Value</button>
+
+        <h2>Tel</h2>
+        <input type="tel" id="tel-demo"/><br><br>
+        <button onclick="getTelValue();">Get Value</button>
+
+        <h2>Time</h2>
+        <input type="time" id="time-demo"/><br><br>
+        <button onclick="getTimeValue();">Get Value</button>
+
+        <h2>URL</h2>
+        <p>Try entering an invalid URL</p>
+        <form action="page-handler.html">
+            <input type="url" id="url-demo"/>
+            <input type="submit"/>
+        </form><br/><br/>
+        <button onclick="geturlValue()">Get Value</button>
+
+        <h2>Week</h2>
+        <input type="week" id="week-demo"/>
+        <button onclick="getweekValue()">Get Value</button>
+
+        <h2>TextArea</h2>
+        <textarea rows="10" cols="40" placeholder="Type your message here" id="textarea-demo"></textarea>
+        <button onclick="gettextareaValue()">Get Value</button>
+
+        <h2>Dropdown List</h2>
+        <select id="dropdown-demo" multiple>
+            <option value="Apples">Apples</option>
+            <option value="Oranges">Oranges</option>
+            <option value="Banana">Banana</option>
+            <option value="Strawberries">Strawberries</option>
+        </select>
+        <button onclick="getdropdownValue();">Get VAlue</button>
+        <button onclick="getdropdownMultipleValue();">Get Multiple Value</button>
+        
+        <script type="text/javascript">
+
+            // Text
+            function getTextValue(){
+                alert(document.getElementById("text-demo").value);
+            }
+
+            // Check Box
+            function getcheckboxValue(){
+                alert(document.getElementById("checkbox-demo").checked);
+            }
+
+            // Color
+            function getcolorValue(){
+                alert(document.getElementById("color-demo").value);
+            }
+
+            // Datetime Local
+            function getdatetimeLocalValue(){
+                alert(document.getElementById("getdatetime-local-demo").value);
+            }
+
+            // File
+            function readFile(){
+                var reader = new FileReader();
+                var file = document.getElementById("file-demo").files[0];
+
+                reader.onload = function(e){
+                    document.getElementById("result").src = e.target.result;
+                } 
+                reader.readAsDataURL(file);
+            }
+
+            // Hidden
+            function getHiddenValue(){
+                alert(document.getElementById("hidden-demo").value);
+            }
+
+            // Month
+            function getMonthValue(){
+                alert(document.getElementById("month-demo").value);
+            }
+
+            // Number
+            function getNumberValue(){
+                alert(document.getElementById("number-demo").value);
+            }
+
+            // Password
+            function getPasswordValue(){
+                alert(document.getElementById("password-demo").value);
+            }
+
+            // Radio
+            function getRadioValue(){
+                //get all radios [male,female]
+                var radios = document.getElementsByName("gender");
+                var count = radios.length;
+
+                for(var i = 0 ; i < count ; i++){
+                    if(radios[i].checked){
+                        alert(radios[i].value);
+                        break;
+                    }
+                }
+            }
+
+            // Range
+            function getRangeValue(){
+                alert(document.getElementById("range-demo").value);
+            }
+
+            // Search
+            function getsearchValue(){
+                alert(document.getElementById("search-demo").value);
+            }
+
+            // Tel
+            function getTelValue(){
+                alert(document.getElementById("tel-demo").value);
+            }
+
+            // Time 
+            function getTimeValue(){
+                alert(document.getElementById("time-demo").value);
+            }
+
+            // URL
+            function geturlValue(){
+                alert(document.getElementById("url-demo").value);
+            }
+
+            // Week
+            function getweekValue(){
+                alert(document.getElementById("week-demo").value);
+            }
+
+            // Textarea
+            function gettextareaValue(){
+                alert(document.getElementById("textarea-demo").value);
+            }
+
+            // Dropdown
+            function getdropdownValue(){
+                alert(document.getElementById("dropdown-demo").value);
+            }
+
+            function getdropdownMultipleValue(){
+                var _options = document.getElementById("dropdown-demo").options;
+                var _options_count = _options.length;
+                var value = [];
+
+                for(var i = 0; i< _options_count; i++){
+                    if(_options[i].selected){
+                        value.push(_options[i].value);
+                    }
+                }
+                alert(JSON.stringify(value));
+            }
+
+        </script>
+
+    </body>
+</html>

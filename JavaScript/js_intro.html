@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS Introduction</title>
+        <!-- <script type="text/javascript"></script> -->
+    </head>
+    <body>
+        <h2>Show Alert Box</h2>
+        <button id="alert-btn">Show Alert Box</button>
+
+        <h2>Change Content</h2>
+        <p id="change-content-demo">I'm first content</p>
+        <button id="change-content-btn">Change Content</button>
+
+        <h2>Change Attribute Value</h2>
+        <img src="monkey.jpeg" id="change-attr-demo"/>
+        <br>
+        <button id="change-attr-btn">Change Image</button>
+
+        <h2>Change Style</h2>
+        <p id="change-style-demo">I'm change style demo</p>
+        <button id="change-style-btn">Change Style</button>
+
+        <h2>Hide and Show HTML Element</h2>
+        <div id="hide-show-demo" style="width:  100px; height: 100px; 
+            background-color: green; padding: 20px;">
+            I'm hide and show demo box    
+        </div>
+        <br>
+        <button type="button" onclick="show()">Show</button>
+        <button type="button" onclick="hide()">Hide</button>
+
+        <script type="text/javascript">
+            // anonymous function
+            document.getElementById("alert-btn").onclick = function(){
+                alert("I'm alert box")
+            }
+
+            // JS for change content
+            document.getElementById("change-content-btn").onclick = function(){
+                document.getElementById("change-content-demo").innerText =
+                "I'm Second Content";
+            }
+
+            // Js for change attribute
+            document.getElementById("change-attr-btn").onclick = function(){
+                document.getElementById("change-attr-demo").src = "dogs.webp"
+            }
+
+            // Change Style Demo
+            document.getElementById("change-style-btn").onclick = function(){
+                document.getElementById("change-style-demo").style.color = "green";
+                document.getElementById("change-style-demo").style.fontWeight = "bold";
+                document.getElementById("change-style-demo").style.fontSize = "50px";
+            }
+
+            // JS for show and hide
+            function show(){
+                document.getElementById("hide-show-demo").style.display = "block";
+            }
+            function hide(){
+                document.getElementById("hide-show-demo").style.display = "none";
+            }
+        </script>
+    </body>
+</html>

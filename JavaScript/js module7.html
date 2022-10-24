@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript Module - 7</title>
+    </head>
+    <body>
+        <h2>JavaScript Timeout and Interval</h2>
+        <h2>Timeout</h2>
+        <p>setTimeout()</p>
+        <!-- 
+            setTimeout(function().delay)
+         -->
+
+         <h2>Print Hello World after 3 s</h2>
+         <script>
+            function myFunction(){
+                alert("Hello World!");
+            }
+
+            // var myTimeout = setTimeout(function(){
+            //     alert("Hello World!");
+            //     document.write("Hello World!");
+            // },3000);
+
+            var myTimeout = setTimeout(myFunction,3000);
+
+            document.write("<h2>Cancel Timeout</h2>");
+
+                function cancelTimeout(){
+                     clearTimeout(myTimeout);
+                     document.getElementById("mesg").innerText = 
+                      "myTimeout has been cancel and will not be shown";
+                }
+         </script>
+        <p id="mesg">Click This Button to cancel the timeout before 3s</p>
+        <button onclick="cancelTimeout()">Cancel Timeout</button>
+
+        <h2>Interval</h2>
+        <p>setIneterval</p>
+        <!-- 
+            setInterval(function(){} , delay );
+         -->
+         <p id="intervalDemo">10</p>
+         <script>
+            var x = 10;
+            var myInterval = setInterval(function(){
+                x += 10; // x = x + 10;
+                document.getElementById("intervalDemo").innerText = x;
+            },1000);
+         </script>
+
+         <h2>Stopping an Interval</h2>
+         <p>clearInterval()</p>
+         <button onclick="stopInterval()">Stop Interval</button>
+         <script>
+            function stopInterval(){
+                clearInterval(myInterval);
+            }
+         </script>
+
+         <h2>JavaScript Bitwise Operators</h2>
+         <h2>Bitwise AND ( & ) Operator</h2>
+         <p id="bitwise-demo1"></p>
+         <script>
+            var num1 = 0 & 0; // return 0
+            var num2 = 0 & 1; // return 0
+            var num3 = 1 & 0; // return 0
+            var num4 = 1 & 1; // return 1
+            document.getElementById("bitwise-demo1").innerHTML = 
+            num1 + "<br>" +
+            num2 + "<br>" +
+            num3 + "<br>" + 
+            num4 + "<br>" ;
+         </script>
+         
+         <h2>Bitwise OR ( | ) Operator</h2>
+         <p id="bitwise-demo2"></p>
+         <script>
+            var num1 = 0 | 0; // return 0
+            var num2 = 0 | 1; // return 1
+            var num3 = 1 | 0; // return 1
+            var num4 = 1 | 1; // return 1
+            document.getElementById("bitwise-demo2").innerHTML = 
+            num1 + "<br>" +
+            num2 + "<br>" +
+            num3 + "<br>" + 
+            num4 + "<br>" ;
+         </script>
+
+        <h2>Bitwise XOR ( ^ ) Operator</h2>
+        <p id="bitwise-demo3"></p>
+        <script>
+        var num1 = 0 ^ 0; // return 0
+        var num2 = 0 ^ 1; // return 1
+        var num3 = 1 ^ 0; // return 1
+        var num4 = 1 ^ 1; // return 0
+        document.getElementById("bitwise-demo3").innerHTML = 
+        num1 + "<br>" +
+        num2 + "<br>" +
+        num3 + "<br>" + 
+        num4 + "<br>" ;
+        </script>
+
+        <h2>JavaScript Regular Expressions</h2>
+        <h2>Creating a Regular Expression</h2>
+        <p> var pattern = /pattern/modifiers</p>
+        <p> var pattern = /programming/gi</p>
+
+        <h2>Search() and Replace()</h2>
+        <h2>Search()</h2>
+        <script>
+            var text = "I love programming";
+            var search1 = text.search("programming"); // 7
+            document.write("<p>" + search1 + " in the text with search() method</p>");
+
+            var search2 = text.search(/pRoGrammIng/i);
+            document.write("<p>" + search2 + " int the text with search(/.../i) method(/p>");
+            //i means case-insensitive
+        </script>
+
+        <h2>Replace()</h2>
+        <script>
+            var text = "Javascript is fun, I love Javascript";
+            var replaceResult1 = text.replace("Javascript","HTML");
+            document.write(replaceResult1 + " with replace()<br>");
+            var replaceResult2 = text.replace(/Javascript/g,"HTML");
+            document.write(replaceResult2 + " with replace(/.../g)");
+        </script>
+
+        <h2>JS Excrption Handling</h2>
+        <h2>Catching an Exception</h2>
+        <h2>The try ... catch Statement</h2>
+        <!-- 
+            try{
+                //block of statements to test
+            }catch(errVariable){
+
+            }
+         -->
+         <p>
+            In this example , the following exception in thrown because
+            myErrorFunction is not defined
+         </p>
+         <p id="exception-demo1"></p>
+         <script>
+            try{
+                myErrorFunction();
+            }catch(err){
+                document.getElementById("exception-demo1").innerText = err;
+            }
+         </script>
+
+         <h1>The throw Statement</h1>
+         <!-- 
+            throw "Error occured"; //string
+            throw 21; // a number
+            throw false; // boolean
+            throw (errorText: "Error occured"); //an object
+          -->
+
+          <p id="exception-demo2"></p>
+          <script>
+            try{
+                throw "An Error occured please fix it!";
+            }catch(err){
+                document.getElementById("exception-demo2").innerText = err;
+            }
+          </script>
+
+          <h2>The</h2>
+          <script>
+          try{
+              throw "An Error Occured!";
+          }catch(err){
+              // print error
+          }finally{
+            document.write("<p>finally block executed after try catch");
+          }
+          </script>
+
+        <h2>Illustractive example</h2>
+        <p>Try to enter a number tha's <b> less than 18</b>.</p>
+        <form>
+            <label>Age: <input type="number" id="age"></label>
+            <button type="button" id="submit">Submit</button>
+            <p id="age-demo"></p>
+        </form>
+        <script>
+            var submitBtn = document.getElementById("submit");
+            submitBtn.onclick = function(){
+                var age = parseInt(document.getElementById("age").value)
+                try{
+                    if(age < 18){
+                        throw "user must be 18 or older";
+                    }else{
+                        document.getElementById("age-demo").innerText = 
+                        "User is Valid"
+                    }
+                }catch(err){
+                    document.getElementById("age-demo").innerText = err;
+                }
+            };
+        </script>
+
+    </body>
+</html>

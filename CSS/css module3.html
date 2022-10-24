@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS Module - 3</title>
+        <!-- Font Awesome Icon - KitCode -->
+        <script src="https://kit.fontawesome.com/83e77abd7a.js" crossorigin="anonymous"></script>
+        <!-- Boostrap Icon - Set Up -->
+        <style type="text/css">
+            @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+            .container1{
+                width: 200px;
+                height: 200px;
+                border: 1px solid black;
+                margin-left: 100px;
+                padding-left: 50px;
+                padding-right: 50px;
+            }
+
+            .container2{
+                width: 200px;
+                height: 200px;
+                border: 1px solid blue;
+                margin-left: 100px;
+                padding-left: 50px;
+                padding-right: 50px;
+                box-sizing: border-box;
+            }
+
+            .bi{
+                color: blue;
+                font-size: 200px;
+                
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <h2>Box Model</h2>
+
+        <h2>Container 1</h2>
+        <div class="container1">
+            <p>I'm a paragraph and content of container1</p>
+        </div>
+
+        <h2>Container 2</h2>
+        <div class="container2">
+            <p>I'm a paragraph and content of container2</p>
+        </div>
+
+        <h2>Text</h2>
+
+        <h2>Text  Color</h2>
+        <p style="color: brown;">I'm a brown text</p>
+
+        <h2>Text  Align</h2>
+        <p style="text-align: center;">I'm a text align</p>
+
+        <h2>Texrt Align Justify</h2>
+        <div style="width: 300px; height: 100px; border: 1px solid black; padding: 5px;">
+            <p style="text-align: justify; text-indent: 20px;">I'm a text alignI'm a text alignI'm a text alignI'm a text alignI'm a text align
+                I'm a text alignI'm a text alignI'm a text align
+                I'm a text alignI'm a text align
+                I'm a text alignI'm a text align
+                I'm a text alignI'm a text align</p>
+        </div>
+
+        <h2>Text Transform</h2>
+        <p style="text-transform: none;">I'm text-trasform none</p>
+        <p style="text-transform: capitalize;">I'm text-trasform capitalize</p>
+        <p style="text-transform: uppercase;">I'm text-trasform uppercase</p>
+        <p style="text-transform: lowercase;">I'm text-trasform lowercase</p>
+
+        <h2>Text Indent</h2>
+        <p style="text-indent: 35px;">I'm a text with indent 35</p>
+        <p style="text-indent: 3rem;">I'm a text with indent 3</p>
+
+        <h2>Text Decoration</h2>
+        <p style="text-decoration: overline dashed indigo;">I'm a text with decoration</p>
+
+        <h2>Text Shadow</h2>
+        <!-- offser-x , offset-y , blur-radius , color -->
+        <p style="text-shadow: 5px 3px 3px fuchsia;">I'm a text with shadow</p>
+
+        <h2>Letter Spacing</h2>
+        <p style="letter-spacing: normal;">I am a paragraph with normal letter spacing</p>
+        <p style="letter-spacing: 2px;">I am a paragraph with letter spacing 2</p>
+
+        <h2>Word Spacing</h2>
+        <p style="word-spacing: normal;">I am a paragraph with normal word spacing</p>
+        <p style="word-spacing: 20px;">I am a paragraph with word spacing 2</p>
+
+        <h2>Line Height</h2>
+        <div style="width: 200px;height: 150px; border: 1px solid black;">
+            I am a paragraph  I am a paragraph I am a paragraph I am a paragraph I am a paragraph I am a paragraph I am a paragraph I am a paragraph I am a paragraph
+        </div>
+
+        <h2>Text Direction</h2>
+        <p style="direction: rtl;">I'm a paragraph with direction rtl</p>
+        <p style="direction: ltr;">I'm a paragraph with direction ltr</p>
+
+        <h2>Font Family</h2>
+        <p style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">I am a paragraph with font family</p>
+
+        <h2>Font Size</h2>
+        <p style="font-size: 20px;">I am a text with font size 20px</p>
+
+        <h2>Font Style</h2>
+        <p style="font-style: normal;">I am a text with normal font style</p>
+        <p style="font-style: italic;">I am a text with italic font style</p>
+        <p style="font-style: oblique;">I am a text with oblique font style</p>
+
+        <h2>Font Weight</h2>
+        <p style="font-weight: 700;">I am a text with font Weight 700</p>
+
+        <h2>Font Variant</h2>
+        <p style="font-variant: normal;">I am a text with normal font variant</p>
+        <p style="font-variant: small-caps;">I'm a text with small-caps font variant</P>
+ 
+        <h2>Font Awesome Icon</h2>
+        <p>Mobile - <i class="fa-solid fa-mobile"></i></p>
+
+        <h2>Boostrap Icons</h2>
+        <p>Wallets - <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-wallet" viewBox="0 0 16 16">
+            <path d="M0 3a2 2 0 0 1 2-2h13.5a.5.5 0 0 1 0 1H15v2a1 1 0 0 1 1 1v8.5a1.5 1.5 0 0 1-1.5 1.5h-12A2.5 2.5 0 0 1 0 12.5V3zm1 1.732V12.5A1.5 1.5 0 0 0 2.5 14h12a.5.5 0 0 0 .5-.5V5H2a1.99 1.99 0 0 1-1-.268zM1 3a1 1 0 0 0 1 1h12V2H2a1 1 0 0 0-1 1z"/>
+            </svg></p>
+        
+        <h3>Icon Examples</h3>
+            Wallets - <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-wallet" viewBox="0 0 16 16">
+            <path d="M0 3a2 2 0 0 1 2-2h13.5a.5.5 0 0 1 0 1H15v2a1 1 0 0 1 1 1v8.5a1.5 1.5 0 0 1-1.5 1.5h-12A2.5 2.5 0 0 1 0 12.5V3zm1 1.732V12.5A1.5 1.5 0 0 0 2.5 14h12a.5.5 0 0 0 .5-.5V5H2a1.99 1.99 0 0 1-1-.268zM1 3a1 1 0 0 0 1 1h12V2H2a1 1 0 0 0-1 1z"/>
+            </svg>
+            Watch - <i class="bi bi-watch"></i>
+            Wifi off - <i class="bi bi-wifi-off"></i>
+
+        <h2>Icon 8</h2>
+        Octopus - <img src="https://img.icons8.com/emoji/48/000000/octopus-emoji.png" style="width: 200px; height: 200px;  border: 3px dashed darksalmon; background-color: aqua;"/>
+
+    </body>
+
+</html>

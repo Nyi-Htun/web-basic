@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript Module - 11</title>
+    </head>
+    <body>
+         <h2>JS Forms</h2>
+         <h2>How to Prevent a Form Being Submitted!</h2>
+         <form action="https://codeliber.com/form-action.php"
+         onsubmit="return validateForm()">
+                <input type="text" name="firstName" id="firstName">
+                <input type="submit">
+        </form>
+        <p>This demo will require internet connection</p>
+        <script>
+            function validateForm(){
+                alert("This form will not be submitted!");
+                return false; // prevent form submit;
+            }
+        </script>
+
+        <h2>Client-side Validation</h2>
+        <form action="https://codeliber.com/form-action.php"
+        onsubmit="return csvalidateForm()">
+            <label> User Name : 
+                <input type="text" name="username" id="username">
+            </label>
+            <input type="submit">   
+        </form>
+        <p>This demo will require internet connection</p>
+        <script>
+            function csvalidateForm(){
+                var username = document.getElementById("username").value;
+                if(username == ""){
+                    alert("Please enter a value!");
+                    return false;
+                }
+            }
+        </script>
+
+        <h2>JS Form Inputs</h2>
+        <h2>Get an Input's Value</h2>
+        <form>
+            <input type="text" name="firstName" id="firstNameInput">
+            <button type="button" onclick="getInputValue()">Get Value</button>
+        </form>
+        <script>
+            function getInputValue(){
+                var val = document.getElementById("firstNameInput").value;
+                alert("This input value is " + val);
+            }
+        </script>
+
+        <h2>Validate Empty Text Input</h2>
+        <p>Same as Client-side Validation Example</p>
+
+        <h2>Limit Number of characters</h2>
+        <p>Try to input a text with more than 10 characters</p>
+        <form action="https://codeliber.com/form-action.php"
+        onsubmit="return validateLimitForm()">
+            <label>Enter Name :
+                <input type="text" name="personName">
+                <input type="submit">
+            </label>
+        </form>
+        <p>This demo will require an internet connection</p>
+        <script>
+            function validateLimitForm(){
+                var val = document.getElementsByName("personName")[0].value;
+                var length = val.length;
+                if(length > 10){
+                    alert("You cannot input more than 10 characters");
+                    return false;
+                }
+            }
+        </script>
+
+        <h2>Validate Numbers</h2>
+        <p>Try to enter age below 18</p>
+        <form action="https://codeliber.com/form-action.php"
+        onsubmit="return validateNumberForm()">
+            <label>Age :
+                <input type="text" name="age">
+                <input type="submit">
+            </label>
+        </form>
+        <p>This demo will require an internet connection</p>
+        <script>
+            function validateNameForm(){
+                var age = document.getElementsByName("age")[0].value;
+                if(age > 18){
+                    alert("Age must be greater than 18");
+                    return false;
+                }
+            }
+        </script>
+
+        <h2>HTML5 require Attributes</h2>
+        <p>Try to submit the form without filling text</p>
+        <form action="https://codeliber.com/form-action.php">
+            <label> UserName : 
+                <input type="text" name="test-name" required>
+            </label>
+            <input type="submit">
+        </form>
+        <p>This demo will require an internet connection</p>
+
+        <h2>min and max Attributes</h2>
+        <p>Try to input a number that is not between 18 and 65</p>
+        <form action="https://codeliber.com/form-action.php">
+            <label> Age : 
+                <input type="number" name="age" min="18" max="65" required>
+            </label>
+            <input type="submit">
+        </form>
+        <p>This demo will require an internet connection</p>
+
+    </body>
+</html>

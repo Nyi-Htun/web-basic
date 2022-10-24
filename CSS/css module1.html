@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>CSS Module - 1</title> 
+       <link rel="stylesheet" type="text/css" href="style.css"/>
+       
+       <!-- Internal CSS style -->
+        <style type="text/css">
+            /* Element Selector */
+            p{
+                font-size: 20px;
+                color: blueviolet;
+                font-weight: bold;
+            }
+            
+            /* Class Selector */
+            .div1{
+                width: 200px;
+                height: 200px;
+                font-size: 50px;
+                color: aqua;
+                border: 1px solid black;
+            }
+
+            /* Id Selector */
+            #div2{
+                width: 100px;
+                height: 100px;
+                font-size: 30px;
+                color: black;
+                border: 1px dashed rgb(18, 4, 106);
+                background-color: azure;
+            }
+
+            /* Grouping Selector */
+            h3,span{
+                color: rgb(222, 15, 67);
+                font-weight: bolder;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>CSS Selectors</h2>
+
+        <ul>
+            <li>Element Selector</li>
+            <li>Class Selector</li>
+            <li>Id Selector</li>
+            <li>Grouping Selector</li>
+        </ul>
+
+        <h2>Element Selector</h2>
+
+        <p>I'm a paragraph and styled with internal style</p>
+
+        <h2>Class Selector</h2>
+        <div class="div1">
+            I am a div1 with class
+        </div>
+
+        <h2>Id Selector</h2>
+        <div id="div2">
+            I am div2 with id
+        </div>
+
+        <h2>Grouping Selector</h2>
+        <h3>I'm element 1</h3>
+        <span>I'm element 2</span>
+
+        <h2>CSS Insertig</h2>selector
+
+        <h2>Inline Style</h2>
+        <p style="color: cornflowerblue; font-size: medium; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
+        I'm a paraagraph with inline style </p>
+
+        <h2>External Style</h2>
+        <p class="ext-style"> I'm a paragraph with external style.</p>
+
+        <h2>CSS Colors</h2>
+        <ul>
+            <li style="color: gold;">Color Name</li>
+            <li style="color: #000fff;">Hexadecimal Color Value</li>
+            <li style="color: rgb(237, 5, 233);">RGB Color Vlue </li>
+        </ul>
+
+    </body>
+
+</html>

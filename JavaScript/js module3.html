@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript Module - 3</title>
+    </head>
+    <body>
+        <h2>Function</h2>
+        <!-- 
+            function functionName(parameter1.parameter2. ....){
+                //code for function to be executed
+            }
+         -->
+
+         <p id="paragraph">Sum will be printed here</p>
+         <button onclick="addNumbers(5,10)">Click To Sum</button>
+         <br>
+         <script>
+            function lineBreak(){
+                document.write("<br>");
+            }
+            function writeText(str){
+                document.write(str);
+            }
+            //calling the function
+            writeText("Hello World");
+            writeText();
+            writeText("I love JS");
+            writeText();
+
+            //function defination
+            function addNumbers(num1,num2){
+                var sum = num1 + num2;
+                // document.write("Sum is: " + sum);
+                document.getElementById("paragraph").innerText = sum;
+            }
+
+            // calling the function;
+            // addNumbers(5,10);
+            
+            lineBreak();
+         </script>
+
+         <h2>The Return Statement</h2>
+         <script>
+            function SumNumbers(num1,num2){
+                var sum = num1 + num2; //15
+                return sum; //return 15
+            }
+
+            var retrunFromSumNumbers = SumNumbers(5,10); //15
+            document.write(retrunFromSumNumbers + " Retruned Value");
+         </script>
+
+         <h2>Function Scope</h2>
+         <script>
+            //golbal variable
+            var fullNameGlobal;
+            function getAge(age){
+                //local variable
+                var fullNameLocal = "Kyaw Kyaw";
+                fullNameGlobal = "Kyaw Kyaw";
+                document.write(fullNameLocal + " is " + age + " year old.");
+                lineBreak();
+            }
+
+            getAge(25);
+            // document.write(fullNameLocal + " from getAge function");
+            // will generate error and nor showing anything
+            document.write(fullNameGlobal + " From Global Variable");           
+         </script>
+
+         <h2>JS Objects</h2>
+            <script>
+                var person = {
+                    fullName: "Tun Tun",
+                    age: 30,
+                    hobbies: ["coding","playing chess"],
+                    isMarried: true,
+                    showName: function(){
+                        alert(this.fullName);
+                    },
+                    shoAge: function(){
+                        alert(this.age);
+                    }
+
+                }
+                // person.showName();
+                // person.shoAge();
+
+                // Accessing Object's Properties
+                document.write(person.fullName);
+                lineBreak();
+                document.write(person.age);
+                lineBreak();
+                document.write(person.hobbies[0] + " , "+ person.hobbies[1]);
+                lineBreak();
+                // person.showName();
+            </script>
+
+            <h2>JS Strings</h2>
+            <script>
+                // " or "
+                var str1 = "Hello World1";
+                var str2 = "Hello World2";
+                // concatenating string( + )
+                document.write(str1 + " " + str2);
+                lineBreak();
+            </script>
+
+            <h2>JS String Methods</h2>
+            <script>
+                var str = "learnjs";
+                // character array
+                // str[0] = 'l',str[1] = '0', ...str[2]
+                var strlen = str.length;
+                document.write(strlen + " String length of " + str);
+                lineBreak();
+                var x = str[5];
+                document.write( x + " is in str[5] of " + str);
+                lineBreak();
+                var text = "How are you?";
+                var strpos = text.indexOf("are");
+                document.write(strpos + " is index of are in " + text);
+                lineBreak();
+                // Converting is Upper and Lower ease
+                var UpperText = text.toUpperCase();
+                document.write(UpperText);
+                var LowerText = text.toLowerCase();
+                document.write(LowerText);
+            </script>
+
+            <h2>JS Numbers</h2>
+            <script>
+                // interger
+                // floating point
+                var num1 = 21 //integer
+                var num2 = 2.5 //folating point
+                lineBreak();
+                document.write(num1 + num2);
+                document.write("<h2>Strings as Numbers</h2>");
+                var sumStringAsNumber = "5" + "25"; //525
+                document.write(sumStringAsNumber);
+
+                // isNan() Method
+                document.write("<h2>isNan() Method</h2>");
+                document.write(isNaN(5)); //5 is not a number
+                lineBreak();
+                document.write(isNaN("5"));
+                lineBreak();
+                document.write(isNaN("hello"));
+            </script>
+
+            <h2>JS Number Methods</h2>
+            <script>
+                lineBreak();
+                document.write("Is 21 integer ?" + "<br>" + Number.isInteger(21));
+                lineBreak();
+                document.write("Is 24.9 integer ?" + "<br>" + Number.isInteger(24.9));
+
+                document.write("<h2>parseInt() Method</h2>");
+                var num1 = "24";
+                document.write(parseInt(num1) + " parseInt(num1)");
+                lineBreak();
+                var num2 = "35.5";
+                document.write(parseInt(num2) + " parseInt(num2)");
+                lineBreak();
+                var num3 = "21 days";
+                document.write(parseInt(num3) + " parseInt(num3)");
+            </script>
+    </body>
+</html>

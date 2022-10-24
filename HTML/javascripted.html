@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript Examples</title>
+    </head>
+    <body>
+
+        <h2>Dynamic Content Example</h2>
+        <p id="sample1">Hello World!</p>
+        <button onclick="ChangeContent();">Change Content</button>
+
+        <h2>Dynamic Style Example</h2>
+        <p id="sample2">Hello World!</p>
+        <button onclick="ChangeStyle();">Change Style</button>
+
+        <h2>Hiding and Showing Example</h2>
+        <div id="sample3" style="width: 200px; height: 200px; background-color: firebrick; border: 5px solid black;">
+
+        I'm hiding and showing example!
+
+        </div>
+        <button onclick="show();" id="showBtn" style="border: 1px solid blue; border-radius: 5px; background-color: brown; display: none;">Show</button>
+        <button onclick="hide();" id="hideBtn" style="border: 1px solid blue; border-radius: 5px; background-color: brown;">Hide</button>
+
+        <h2>Dynamic Image Example</h2>
+        <img src="images/image1.webp" style="max-width: 100px; max-height: 100px;" id="sample4"/><br/>
+        <button onclick="changeimage();">Change Image</button>
+        <button onclick="originalimage();">original Image</button>
+
+        <script type="text/javascript">
+
+            function ChangeContent() {
+                document.getElementById("sample1").innerText = "I love developing websites!";
+            }
+
+            function ChangeStyle(){
+                var elementStyle = document.getElementById("sample2").style ;
+                elementStyle.fontSize = "20px";
+                elementStyle.fontStyle = "italic";
+                elementStyle.color = "gold";
+            }
+
+            function show(){
+                document.getElementById("sample3").style.display = "block";
+                document.getElementById("showBtn").style.display = "none";
+                document.getElementById("hideBtn").style.display = "block";
+            }
+
+
+            function hide(){
+                document.getElementById("sample3").style.display = "none";
+                document.getElementById("showBtn").style.display = "block";
+                document.getElementById("hideBtn").style.display = "none";
+            }
+
+            function changeimage(){
+                document.getElementById("sample4").src = "images/wallpaper.jpg";
+            }
+
+            function originalimage(){
+                document.getElementById("sample4").src = "images/image1.webp";
+            }
+
+        </script>
+    
+    </body>
+</html>

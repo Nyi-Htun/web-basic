@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript Module - 6</title>
+    </head>
+    <body>
+        <h2>JS For Loop</h2>
+        <ul>
+            <li>initialEpression</li>
+            <li>condition</li>
+            <li>incrementExpression</li>
+        </ul>
+
+        <p id="loop-demo"></p>
+        <script>
+            var fruits = ["apple" , "banana" , "mango" , "orange" , "strawberry"];
+            var html = "";
+
+            // array always starts from zero position
+            // fruits.length = 5 // i < 5
+                    // 5 < 5 ? no
+            for(var i = 0 ; i < fruits.length ; i++){
+                html += "<p>" + fruits[i] + "</p>";
+            //html = "<p>" + fruits[0] + "</p>";
+                //html = "<p>" + fruits[1] + 
+                //"</p>" + "<p>" + fruits[2] +
+                // "</p>" + "<p>" + fruits[3] + 
+                //"</p>" + "<p>" + fruits[4] + "</p>" +
+            }
+
+            document.getElementById("loop-demo").innerHTML = html;
+            document.write("<h2> Print Hello World 5 times </h2>");
+
+            for(var i = 0 ; i < 5 ; i++){
+                document.write("<p>Hello World</p>");
+            }
+        </script>
+
+        <h2>For of Loop</h2>
+        <!-- 
+            for(variable of iterable){
+                //statement of code block
+            }
+         -->
+
+         <ul>
+            <li>variable</li>
+            <li>iterable</li>
+         </ul>
+
+         <script>
+            var cities = ["Yangon" , "Mandalay" , "Sagaing" , "Magway"];
+            for(city of cities){
+                document.write(city + "<br>");
+            }
+
+            document.write("<h3>Loop characters of a string</h3>");
+            var text = "Learn Programming";
+            for(letter of text){
+                document.write(letter + "<br>");
+            }
+         </script>
+
+         <h2>JS While Loop</h2>
+         <!-- 
+            while(condition){
+                //statement of code block
+            }
+          -->
+
+          <ul>
+            <li>condition</li>
+            <li>statement</li>
+          </ul>
+
+          <script>
+            var i = 0;
+
+            while(i < 3){
+                document.write("Hello World<br>");
+                i++;
+            }
+
+            document.write("<h3>Loop Over an array Using while loop</h3>");
+            // var cities = ["Yangon" , "Mandalay" , "Sagaing" , "Magway"];
+            //                  0     ,     1      ,      2    ,     3 
+            
+            var length = cities.length;
+
+            var j = 0;
+            // 4 < 4 ? no -> exite while loop
+            // j = 4 ; 4 < 4 ? no
+            while(j < length){
+                document.write(cities[j] + "<br>");
+                j++;
+            }
+          </script>
+
+          <h2>do...while loop</h2>
+          <!-- 
+            do{
+                // statement or code blocks
+            }while(condition)
+           -->
+
+           <ul>
+            <li>statement</li>
+            <li>condition</li>
+           </ul>
+
+           <script>
+                var i = 0;
+                do{
+                    document.write("<p>Hello World</p>");// 3
+                    i++;
+                }while( i < 3 ); // 3 < 3 ? no -> exit do while loop
+
+                var k = 0;
+                var items = ["items1" , "items2" , "items3" , "items4"];
+                        //      0     ,     1    ,     2    ,     3
+
+                var len = items.length; // 4
+                do{
+                    document.write(items[k] + "<br>");
+                    k++;
+                }while(k < len) // 4 < 4 ? no - exit do while loop
+           </script>
+
+           <h2>Break</h2>
+           <p>break is used to exist loop</p>
+           <script>
+                for(var i = 0 ; i < 10 ; i++){
+                    document.write(i + " ");
+                    if(i == 5){
+                        break;
+                        //exit loop
+                    }
+                }
+           </script>
+
+           <h2>Continue</h2>
+           <p>continue is used to skip a step</p>
+           <script>
+            for(var j = 0 ; j < 10 ; j++){
+                if(j == 5){
+                    continue;
+                    // skip the below statements or steps
+                }
+                document.write(j + " ");
+            }
+           </script>
+
+    </body>
+</html>

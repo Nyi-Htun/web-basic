@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS Module - 2</title>
+    </head>
+    <body>
+        <h1>Oprators</h1>
+        <h2>Arithmetic Operators</h2>
+        <!-- + , - , * , / -->
+        <script>
+            //  +
+            var num1 = 8;
+            var num2 = 2;
+            var sum = num1 + num2;
+            document.write("Sum of num1 and num2 is: " + sum + "<br>");
+
+            // -
+            var difference = num1 - num2;
+            document.write("Substracrtion of num1 and num2 is: " + difference + "<br>");
+
+            //*
+            var product = num1 * num2;
+            document.write("Product of num1 and num2 is: " + product + "<br>");
+
+            // /
+            var quotient = num1 / num2;
+            document.write("Quotient when num1 is divided by num2 is: " + quotient + "<br>");
+
+            // %
+            var remainder = num1 % num2;
+            document.write("Remainder when num1 is divided by num2 is: " + remainder + "<br>");
+
+            // **
+            var exponential = num1 ** num2;
+            // 8 * 8
+            document.write("Exponential is: " + exponential + "<br>");
+            // Increment & Decrement
+            // ++ , -- ( 1 )
+
+            document.write("Increment of num1 is: " + (++num1) + "<br>");
+            document.write("Decrement of num2 is: " + (--num2) + "<br>");
+
+            var x = 10 + 2 * 2;
+            document.write("Answer of 10 + 2 * 2 is: " + x + "<br>");
+            // ( * , / , + , - )
+
+        </script>
+
+        <h2>String Operator</h2>
+        <script>
+            var firstName = "John";
+            var lastName = " Doe";
+            var fullName = firstName + lastName;
+            document.write("Full Name is : " + fullName +" <br>");
+            //concatinate
+            var text1 = "This is text 1. ";
+            var text2 = "This is text 2. ";
+            var text3 = "This is text 3.";
+            var fullText = text1 + text2 + text3;
+            document.write(fullText + "<br>");
+        </script>
+
+        <h2>Comparison Operators</h2>
+        <!-- ( > , < , == , != , <= , >= , === ) -->
+        <script>
+            var x = 5;
+            var y = 5;
+            var z = "Hello";
+            //true - false
+            document.write("x is : " + x + " & y is : " + y + " & z is : " + z +"<br>");
+            document.write("x > y is : " + (x > y) + "<br>");
+            document.write("x < y is : " + (x < y) + "<br>");
+            document.write("x == y is : " + (x == y) + "<br>");
+            document.write("x != y is : " + (x != y) + "<br>");
+            document.write("x >= y is : " + (x >= y) + "<br>");
+            document.write("x <= y is : " + (x <= y) + "<br>");
+            document.write("x === y is : " + (x === y) + "<br>");
+            document.write("x === z is : " + (x === z) + "<br>");
+        </script>
+
+        <h2>Assignment Operators</h2>
+        <ul>
+            <li>x = y</li>
+            <li>x += y ( x = x + y )</li>
+            <li>x -= y ( x = x - y )</li>
+            <li>x *= y ( x = x * y )</li>
+            <li>x /= y ( x = x / y )</li>
+            <li>x %= y ( x = x % y )</li>
+            <li>x **= y ( x = x ** y )</li>
+        </ul>
+
+        <script>
+            document.write("Assignment ( = ) <br>");
+            var x = 4;
+            document.write("x is : " + x + "<br>");
+            var y = 8;
+            x = y;
+            document.write("x = y is: " + x + "<br>");
+            document.write("Addition Assignment ( += )<br>");
+            x += y
+            // x = x + y
+            // x = 8 + 8 = 16
+            document.write("x += y is: " + x + "<br>");
+
+            x = 8
+            x -= y
+            document.write("x -= y is: " + x + "<br>");
+
+            x = 8
+            x *= y
+            document.write("x *= y is: " + x + "<br>");
+
+            x = 8
+            x **= y
+            document.write("x **= y is: " + x + "<br>");
+
+            x %= y
+            document.write("x %= y is: " + x + "<br>");
+
+            // x -= y
+            // x *= y
+            // x %= y
+            // x **= y
+        </script>
+
+        <h2>Logical Operators</h2>
+        <!-- && , || , ! -->
+        <script>
+            document.write("Logical And ( && ) <br>");
+            document.write("false && true is: " + ( false && true) + "<br>");
+            document.write("(3 == 3 && 4 == 5 ) is: " + (3 == 3 && 4 == 5) + "<br>");
+            
+            document.write("Logical Or ( || ) <br>");
+            document.write("false && true is: " + ( false || true) + "<br>");
+            document.write("(3 == 3 || 4 == 5 ) is: " + (3 == 3 || 4 == 5) + "<br>");
+
+            document.write("Logical Not ( ! ) <br>");
+            document.write("!(true) is: " + !( true ) + "<br>");
+            document.write("!(false) is: " + !( false ) + "<br>");
+            document.write("!(3 == 3 ) is: " + !(3 == 3) + "<br>");
+        </script>
+
+        <h2>Conditional Operator</h2>
+        <script>
+            // true && true = true
+            if(3 == 3 && 4 == 4){
+                document.write("The conditone is true <br>");
+            }
+
+            // true && false = false
+            if(3 == 3 && 3 == 4){
+                document.write("I will not print!");
+            }
+
+            // if else
+            if( 1 > 2 ){
+                document.write("1 > 2 is true <br>");
+            }else{
+                document.write("1 > 2 is false <br>");
+            }
+
+            document.write("<h2>Ternary Opeprator</h2><br>");
+            var testScore = 70;
+            var testResult = (testScore > 75) ? "Passed" : "Failed";
+            document.write("Test result is: " + testResult + "<br>");
+        </script>
+
+    </body>
+</html>

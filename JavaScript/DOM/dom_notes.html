@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript DOM Notes</title>
+    </head>
+    <body>
+        <h2>JS DOM Navigation</h2>
+        <h2>Parent and Children</h2>
+
+        <div id="container1">
+            <h1>Hello World</h1>
+            <p id="p-demo1">This is a paragraph</p>
+            <a href="http://example.com">Go To Example.com</a>
+        </div>
+        <script>
+            // let's select the <p> element
+            var pElement = document.getElementById("p-demo1");
+
+            // let's select the <p> element's parent
+            pElement.parentElement.style.backgroundColor = "gold";
+
+            document.write("<h2>firstElementChild</h2>");
+            document.write("<p>this will select h1</p>");
+
+            // let's select the div element
+            var divElement = document.getElementById("container1");
+            divElement.firstElementChild.style.color = "red"; 
+
+            document.write("<h2>lastElementChild</h2>");
+            document.write("<p>this will select p </p>");
+
+            divElement.lastElementChild.style.color = "green";
+            divElement.lastElementChild.style.fontSize = "24px";
+
+            document.write("<h2>children property</h2>");
+            document.write("<p>this will select p </p>");
+
+            divElement.children[1].style.color = "blue";
+            divElement.children[1].style.fontSize = "50px";
+        </script>
+
+        <h2>Siblings</h2>
+        <div id="container2">
+            <h1>Hello World</h1>
+            <p id="p-demo2">This is a paragraph</p>
+            <a href="http://exmple.com">Go To Example.com</a>
+        </div>
+
+        <script>
+
+            // let's select the <p> element
+                var pElement2 = document.getElementById("p-demo2");
+
+            // let's select the <p> element's parent
+            pElement2.previousElementSibling.style.backgroundColor = "green";
+
+            // will select the a inside the container2
+            pElement2.nextElementSibling.style.textDecoration = "blue underline";
+            pElement2.nextElementSibling.style.color = "gold";
+
+        </script>
+
+        <h2>JS DOM HTML</h2>
+        <h2>Getting Element's Content</h2>
+        <ul id="list">
+            <li>Mangoes</li>
+            <li>Bananas</li>
+            <li>Oranges</li>
+        </ul>
+        <button onclick="showInfo()">Show Info</button>
+        <script>
+            function showInfo(){
+                var list = document.getElementById("list");
+                alert(list.innerHTML);
+            }
+        </script>
+
+        <h2>Replacing Element's Content</h2>
+        <button onclick="replaceContent()">Replace List Content</button>
+        <script>
+            function replaceContent(){
+                var list = document.getElementById("list");
+                list.innerHTML = "<li> Mercury </li>" + "<li> Venus </li>" + "<li> Earth </li>";
+            }
+        </script>
+        
+        <h2>Creating Elements (Nodes)</h2>
+        <div id="container3">
+
+        </div>
+        <script>
+            var element = document.createElement("p");
+            var textNode = document.createTextNode("Hello World");
+
+            // appendChild() -> this will insert the content into the element
+            element.appendChild(textNode);
+            // <p>Hello World</p>
+
+            document.getElementById("container3").appendChild(element);
+
+        </script>
+
+        <h2>Inserting to Elements</h2>
+        <!-- ParentNode prepend() -->
+        <ul id="list2">
+            <li>Mangoes</li>
+            <li>Bananas</li>
+            <li>Oranges</li>
+        </ul>
+        <button onclick="prependContent()">Prepend Content</button>
+        <button onclick="appendContent()">Append Content</button>
+        <button onclick="removeContent()">Remove Content or Element</button>
+
+        <script>
+            var list2 = document.getElementById("list2");
+
+            function prependContent(){
+                var li = document.createElement("li");
+                var textNode = document.createTextNode("Strawberry");
+                li.appendChild(textNode);
+                //<li>Strawberry</li>
+
+                list2.prepend(li);
+            }
+
+            function appendContent(){
+                var li = document.createElement("li");
+                var textNode = document.createTextNode("Grape");
+                li.appendChild(textNode);
+                // <li>Grape</li>
+
+                list2.append(li);
+            }
+
+            function removeContent(){
+                var firstChild = list2.firstElementChild
+                firstChild.remove();
+            }
+
+        </script>
+
+        <h2>Working With Attributes</h2>
+        <h2>Getting Attribute Value</h2>
+        <!-- node.getAttribute(attributeName) -->
+
+        <a href="http://example.com" id="attri-demo">Go To Example.com</a>
+
+        <button onclick="getHrefValue()">Get Here Value</button>
+        <button onclick="setHrefValue()">Set Here Value</button>
+        <script>
+            var a = document.getElementById("attri-demo");
+
+            function getHrefValue(){
+                var hrefValue = a.getAttribute("href");
+                alert(hrefValue);
+                a.innerHTML = "Go To Example.com"
+            }
+
+            function setHrefValue(){
+                a.setAttribute("href","https://www.google.com");
+                alert(a.getAttribute("href"));
+                a.innerHTML = "Go To google.com";
+            }
+        </script>
+
+
+        
+    </body>
+</html>

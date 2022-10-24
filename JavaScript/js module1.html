@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS Module - 1</title>
+    </head>
+    <body>
+        <h2>D isplay Output</h2>
+        <ul>
+            <li>Console</li>
+            <li>Dialog Boxes</li>
+            <li>Writing to HTML Elements</li>
+            <li>Writing to Browser Window</li>
+        </ul>
+
+        <h2>Using Console</h2>
+        <script type="text/javascript">
+            var x = 10;
+            var y = 5;
+            var sum = x + y;
+            console.log(sum);
+        </script>
+
+        <h2>Using Dialog Box</h2>
+        <button type="button" onclick="sumNum()">Show Dialog</button>
+        <script type="text/javascript">
+            function sumNum(){
+                var x = 10;
+                var y = 5;
+                var sum = x + y;
+                alert(sum);
+            }
+        </script>
+
+        <h2>Writing to HTML Element</h2>
+        <p id="sum-demo">Sum Output</p>
+        <button onclick="WriteOutput()">WriteOutput</button>
+        <script type="text/javascript">
+            function WriteOutput(){
+                var x = 10;
+                var y = 5;
+                var sum = x + y;
+                document.getElementById("sum-demo").innerHTML = sum;
+                // write sum to HTML p Element
+            }
+        </script>
+
+        <h2>Writing to Browser Window</h2>
+
+        <button onclick="writeBrowser()">writeBrowser</button>
+        <script type="text/javascript">
+            function writeBrowser(){
+                var x = 10;
+                var y = 5;
+                var sum = x + y;
+                document.write("<p>" + sum + "</p>");
+            }
+        </script>
+
+        <!-- Statement -->
+        <h2>javascript Statement</h2>
+        <p id="p-demo1"></p>
+        <p id="p-demo2"></p>
+        <button onclick="writeParagraph()">Write Paragraph</button>
+        <script type="text/javascript">
+            // Grouping Statement
+            function writeParagraph(){
+                // statement
+                document.getElementById("p-demo1").innerText = "Hello";
+                // another statement
+                document.getElementById("p-demo2").innerText = "World";
+            }
+        </script>
+
+        <h1>Javascript Syntax</h1>
+
+        <h2>Variable Declaration</h2>
+        <script type="text/javascript">
+            // variable declaration with var
+            var num = 30;
+            document.write(num);
+        </script>
+
+        <h2>Javascript is Case Sensitive</h2>
+        <script type="text/javascript">
+            var num = 5;
+            var Num = 10;
+            var sum = num + Num;
+            document.write(sum);
+        </script>
+
+        <h2>Javascript Commenet</h2>
+        <script type="text/javascript">
+            // This is sinigle line comment
+            document.write("I'm below single line comment<br>");
+            /*
+            This is multiline comment
+            This is multiline comment
+            This is multiline comment
+            This is multiline comment
+            */
+           document.write("I'm below multiline comment");
+        </script>
+
+        <h2>Javascript Variable</h2>
+        <script type="text/javascript">
+            var firstName = "Kyaw";
+            var lastName = "Tun";   
+            var fullName = firstName + " " + lastName;
+            document.write(fullName);
+        </script>
+
+        <h1>Javascript Datatype</h1>
+
+        <h2>String Datatype</h2>
+        <script type="text/javascript">
+            var name = "Tun Tun"
+            // string datatype
+            document.write("String Datatype: " + name);
+        </script>
+
+        <h2>Number Data</h2>
+        <script type="text/javascript">
+            var num = 1;
+            document.write("Number Datatype: " + num);
+        </script>
+
+        <h2>Combining String and Number</h2>
+        <script type="text/javascript">
+            var text = "Tun " + 21;
+            document.write("Combining String and Number Datatype: " + text);
+        </script>
+
+        <h2>Boolean Data Type</h2>
+        <!-- true or false -->
+        <script type="text/javascript">
+            var isCodingFun = true;
+            document.write("Boolean Datatype: " + isCodingFun + "<br>");
+            // ==
+            var x = 3;
+            var y = 4;
+            var areEqual = (x == y); //x == y ? true : false
+            document.write("x == y is: " + areEqual);
+        </script>
+
+        <h2>Undefined Data Type</h2>
+        <script type="text/javascript">
+            var title;
+            document.write("Undefined Datatype: " + title);
+        </script>
+
+        <h2>The null Data Type</h2>
+        <script type="text/javascript">
+            var fruit = null;
+            document.write("Null Datatype: " + fruit);
+        </script>
+
+        <h2>Object Data Type</h2>
+        <script type="text/javascript">
+            //create an object
+            var banana = {
+                color: "yellow",
+                size: "long",
+                quantity: 3,
+                isSweet: true,
+            };
+
+            // ( . ) Operator
+
+            document.write(
+                "Banana <br>" +
+                "Color: " + banana.color + "<br>" +
+                "Size: " + banana.size + "<br>" +
+                "Quantity: " + banana.quantity + "<br>" +
+                "isSweet: " + banana.isSweet + "<br>" 
+            );
+        </script>
+
+        <h2>Javascript Array</h2>
+        <script type="text/javascript">
+            //create an array []
+            var fruit = ["apple","orange","banana"];
+            //fruit[0] = "apple"
+            // fruit[1] = "orange"
+            // fruit[2] = "banana"
+
+            document.write(
+                "fruit[0] is " + fruit[0] + "<br>" +
+                "fruit[1] is " + fruit[1] + "<br>" +
+                "fruit[2] is " + fruit[2] + "<br>"  
+            );
+        </script>
+
+        <h2>Javascript Dynamic Data Type</h2>
+        <script type="text/javascript">
+            var x = "text"; //String Datatype
+            x = true; //Boolean Datatype
+            x = 21; //Number Datatype
+            document.write("Dynamic Datatype: " + x);
+        </script>
+
+        <h2>typeof Operator</h2>
+        <script type="text/javascript">
+            document.write(
+                "Type of Hello World is: " + typeof "Hello World" + "<br>" +
+                "Type of 21 is: " + typeof 21 + "<br>" +
+                "Type of true is: " + typeof true + "<br>" +
+                "Type of undefined is: " + typeof undefined + "<br>"
+            );
+        </script>
+
+        <h2>Privitive Data Type</h2>
+        <ul>
+            <li>string</li>
+            <li>number</li>
+            <li>boolean</li>
+            <li>undefined</li>
+        </ul>
+
+        <h2>Complex Data Type</h2>
+        <ul>
+            <li>array</li>
+            <li>object</li>
+            <li>function</li>
+        </ul>
+
+    </body>
+</html>

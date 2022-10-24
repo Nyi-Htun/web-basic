@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript Module - 10</title>
+    </head>
+    <body>
+        <h2>JavaScript this keyword</h2>
+        <p id="demo"></p>
+        <script>
+            var fruit = {
+                name: "mango",
+                color: "yellow",
+                isSweet: true,
+                showFruit: function(){
+                    document.getElementById("demo").innerText =
+                    "The " + this.name + " is " + this.color;
+                }
+            };
+
+            fruit.showFruit();
+        </script>
+
+        <h2>the Global Object</h2>
+        <!-- window object represents the global object -->
+        <script>
+            window.document.write("Hello World");
+            // window.alert("Hello World");
+
+            var name = "Kyaw Kyaw";
+
+            function greetUser(){
+                alert("Hello User!");
+            }
+            window.greetUser();
+        </script>
+
+        <h2>this in a Function</h2>
+        <button onclick="myFunc();">Call myFunc()</button>
+        <script>
+            var city = "Yangon";
+            function myFunc(){
+                var x = this; // x = window;
+                x.alert("I want to go to " + x.city);
+            }
+        </script>
+
+        <h2>this Alone</h2>
+        <script>
+            var y = this; // y = window;
+            y.document.write("this alone");
+        </script>
+
+        <h2>this in an EventHandler</h2>
+        <button id="btn">Click to hide Me</button>
+        <script>
+            var btn = document.getElementById("btn");
+            btn.onclick = function(){
+                this.style.display = "none";
+                // this represent btn
+            };
+        </script>
+
+        <h2>JS Arrow Function</h2>
+        <!-- 
+            function myFunc(){
+                alert("Hello World");
+            }
+
+            Arrow Function
+
+            myFunc = () => {
+                alert("Hello World");
+            }
+            myFunc = () => alert("Hello World");
+        -->
+        <button onclick="myFunc2();">Click to Call Arrow Function</button>
+        <script>
+            myFunc2 = ()=> alert("Hello World! I was call via the arrow function");
+        </script>
+
+        <h2>Parameters in Arrow Function</h2>
+        <button onclick="myFunc3(5,3);">Click to Call myFunc3()</button>
+        <script>
+            myFunc3 = (x,y) => alert(x + y);
+        </script>
+
+        <h2>thsi in Arrow Function</h2>
+        <button id="btn-hide">Click to Hide Me</button>
+        <script>
+            var btnHide = document.getElementById("btn-hide");
+
+            btnHide.onclick = function(){
+                hide = ()=> {
+                    this.style.display = "none";
+                    // this represent btnHide
+                };
+                hide();
+            };
+        </script>
+
+        <h2>Javascript Classes</h2>
+        <h2>Declaring a Class</h2>
+        <p id="par"></p>
+        <script>
+            class Fruit{
+                constructor(fruitName,fruitColor){
+                    this.name = fruitName;
+                    this.color = fruitColor;
+                    this.taste = "sweet";
+                }
+
+                // Methods in Classes
+                showInfo(){
+                    document.write(fruit.name + " is " + fruit.color + " and it's " + fruit.taste);
+                }
+
+                //Static Method in Class
+                static sayHello(text){
+                    return text;
+                }
+            }
+
+            var fruit = new Fruit("mango" , "yellow");
+            fruit.showInfo();
+            document.getElementById("par").innerText = 
+            Fruit.sayHello("Hello I'm writing to paragraph with static method");
+        </script>
+
+        <h2>JS JSON</h2>
+        <!-- Javascript Object Notation -->
+        <p id="json-par"></p>
+        <script>
+            var text = `{
+                "firstName" : "John";
+                "lastName" : "Doe",
+                "age" : 30,
+                "isMarried": true
+            }`;
+
+            var obj = JSON.parse(text);
+            //convert json to obj
+            document.getElementById("json-par").innerText = 
+            obj.firstName + " " + obj.lastName + " is " + obj.age +
+            " years old"; 
+        </script>
+
+        <h2>Converting JS Object to JSON</h2>
+        <p id="object-par"></p>
+        <script>
+            var obj = {
+                "firstName" : "John",
+                "lastName" : "Doe",
+                "age" : 30,
+                "isMarried" : true
+            };
+
+            var text = JSON.stringify(obj);
+            document.getElementById("object-par").innerText = text;
+        </script>
+    </body>
+</html>

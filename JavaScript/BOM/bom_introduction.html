@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+           <title>BOM - Browser Object Model</title>
+    </head>
+    <body>
+        <h2>JS BOM Window</h2>
+        <script>
+            var txt = "HELLO WORLD";
+
+            function sayHELLO(){
+                document.write(window.txt);
+            }
+
+            window.sayHELLO();
+        </script>
+
+        <h2>Window Width and Height</h2>
+        <p id="demo"></p>
+
+        <script> 
+            var width = window.innerWidth;
+            var height = window.innerHeight;
+
+            document.getElementById("demo").innerHTML = 
+            "Width " + width + " and " + "height " + height; 
+        </script>
+
+        <h2>JS BOM Screen</h2>
+        <ul>
+            <li>width</li>
+            <li>availWidth</li>
+            <li>height</li>
+            <li>availHeight</li>
+            <li>orientation</li>
+            <li>pixelDepth</li>
+            <li>colorDepth</li>
+        </ul>
+
+        <h2>The width Property</h2>
+        <script>
+            document.write(screen.width);
+        </script>
+
+        <h2>The availWidth Property</h2>
+        <script>
+            document.write(screen.availWidth);
+        </script>
+
+        <h2>The Height Property</h2>
+        <script>
+            document.write(screen.height);
+        </script>
+
+        <h2>The availHeight Property</h2>
+        <script>
+            document.write(screen.availHeight);
+        </script>
+
+        <h2>The orientation Property</h2>
+        <script>
+            document.write(screen.orientation.type);
+        </script>
+
+        <h2>The pixelDepth Property</h2>
+        <script>
+            document.write(screen.pixelDepth);
+        </script>
+
+        <h2>The colorDepth Property</h2>
+        <script>
+            document.write(screen.colorDepth);
+        </script>
+
+        <h2>JS BOM Location</h2>
+
+        <h2>The href Property</h2>
+        <script>
+            document.write(location.href);
+        </script>
+
+        <h2>The protocol Property</h2>
+        <script>
+            document.write(location.protocol);
+        </script>
+
+        <h2>The hostname Property</h2>
+        <script>
+            document.write(location.hostname);
+        </script>
+
+        <h2>The pathname Property</h2>
+        <script>
+            document.write(location.pathname);
+        </script>
+    </body>
+</html>

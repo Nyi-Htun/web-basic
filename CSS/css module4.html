@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS Module - 4</title>
+
+        <style type="text/css">
+
+            ul{
+                list-style-type: square;
+            }
+
+            ol{
+                list-style-type: upper-latin;
+            }
+
+            /* CSS for Table */
+            table,th,td{
+                border: 1px solid black;
+            }
+
+            /* border-collapse */
+            table{
+                width: 100%;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                border-collapse: collapse;
+            }
+
+            /* Table Padding */
+            th,td{
+                padding: 5px;
+            }
+
+            /* Aligning Table Content */
+            thead th,tbody td{
+                text-align: center;
+            }
+
+            thead th:nth-child(1){
+                width: 40%;
+            }
+
+            thead th:nth-child(2){
+                width: 40%;
+            }
+
+            thead th:nth-child(3){
+                width: 20%;
+            }
+
+            th{
+                background-color: bisque;
+            }
+
+            tr:nth-child(odd){
+                background-color: aqua;
+            }
+
+            tr:nth-child(even){
+                background-color: chartreuse;
+            }
+
+            button{
+                font-family: monospace;
+                padding: 15px 30px;
+                font-size: 20px;
+                /* border: none;
+                outline: none; */
+            }
+
+            #button1{
+                background-color: rgb(27, 238, 12);
+                color: brown;
+            }
+
+            #button2{
+                background-color: rgb(4, 4, 191);
+                color: rgb(236, 158, 12);
+            }
+
+            #button3{
+                background-color: rgb(238, 12, 238);
+                color: rgb(10, 54, 1);
+            }
+
+            #trans-btn{
+                color: rgb(17, 243, 209);
+                border: 4px solid lawngreen;
+                background: transparent;
+            }
+
+            #effect-btn{
+                transition-duration: 1s;
+                -webkit-transition-duration: 1s;
+            }
+
+            #effect-btn:hover{
+                background-color: rgba(48, 48, 48, 0.737);
+                color: indianred;
+                border: 5px solid black;
+                box-shadow: 1px 1px 2px 3px rgb(1, 1, 47);
+                cursor: pointer;
+            }
+
+            .button-group button{
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                border: none;
+                pad: 10x 20px;
+                font-size: 18px;
+                outline: none;
+                background: transparent;
+                color: rgb(234, 245, 245);
+                background: gray;
+                border: 1px solid blueviolet;
+                transition-duration: 1s;
+                -webkit-transition-duration: 1s;
+                float: left;
+                /* For Grouping Vertical */
+                /* display: block; */
+            }
+
+            .button-group button:hover{
+                color: lawngreen;
+                background: hotpink;
+                box-shadow: 1px 1px 2px 3px rgb(1, 1, 47);
+            }
+
+            /* CSS for Test On Image */
+            .container{
+                position: relative;
+            }
+
+            span{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+            }
+
+            /* CSS For Image Card */
+            .card{
+                box-shadow: 0 10px 20px black, 0 10px 20px black;
+                width: 250px;
+                box-sizing: border-box;
+                transition-duration: 1s;
+            }
+
+            .card > img{
+                display: block;
+                max-width: 100%;
+                height: auto;
+                margin: 0px;
+            }
+
+            .card > p{
+                font-family: sans-serif;
+                padding: 5px;
+                text-align: center;
+            }
+
+            .card:hover{
+                box-shadow: 0 15px 30px black, 0 14px 30px black;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h2>Unorder Lists</h2>
+        <ul>
+            <!-- none, disc, circle, square -->
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+            <li>Item 5</li>
+        </ul>
+
+        <h2>Order Lists</h2>
+        <ol>
+            <!-- none, decimal, lower-roman, upper-roman, lower-alpha, upper-alpha,...etc -->
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+            <li>Item 5</li>
+        </ol>
+
+        <h2>Table</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Gender</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Aye</td>
+                    <td>Aye</td>
+                    <td>Female</td>
+                </tr>
+                <tr>
+                    <td>Aye</td>
+                    <td>Aye</td>
+                    <td>Female</td>
+                </tr>
+                <tr>
+                    <td>Aye</td>
+                    <td>Aye</td>
+                    <td>Female</td>
+                </tr>
+                <tr>
+                    <td>Aye</td>
+                    <td>Aye</td>
+                    <td>Female</td>
+                </tr>
+                <tr>
+                    <td>Aye</td>
+                    <td>Aye</td>
+                    <td>Female</td>
+                </tr>
+                <tr>
+                    <td>Aye</td>
+                    <td>Aye</td>
+                    <td>Female</td>
+                </tr>
+                <tr>
+                    <td>Aye</td>
+                    <td>Aye</td>
+                    <td>Female</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>CSS Outline</h2>
+        <p style="outline-style: auto;">Outline Auto</p>
+        <p style="outline-style: none;">Outline None</p>
+        <p style="outline-style: groove;">Outline Groove</p>
+
+        <p style="outline: 10px double blue;">Outline Style</p>
+
+        <h2>Button</h2>
+        <button id="button1">Button 1</button>
+        <button id="button2">Button 2</button>
+        <button id="button3">Button 3</button>
+
+        <button id="trans-bth">Transparent Button</button>
+        
+        <h2>Button Mouse Over Effects</h2>
+        <button id="effect-btn">Effect Button</button>
+
+        <h2>Button Group</h2>
+        <div class="button-group">
+            <button class="btn1">Button1</button>
+            <button class="btn2">Button2</button>
+            <button class="btn3">Button3</button>
+        </div>
+        <div style="clear: both;"></div>
+        <h2>Test on Image</h2>
+        <div class="container">
+            <img src="gh.webp" style="width: 100%; height: 250px; ">
+            <span> Center</span>
+        </div>
+
+        <h2>Image As Card</h2>
+        <div class="card">
+            <img src="tiger.jpeg"/>
+            <p>Description of the image</p>
+        </div>
+
+    </body>
+</html>

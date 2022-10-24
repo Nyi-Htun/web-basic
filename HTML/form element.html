@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form Element</title>
+    </head>
+    <body>
+
+        <!-- <label>
+            The sentence value:
+            <input type="text" autocapitalize="sentences"/>
+        </label>
+        <br/><br/>
+        <label>
+            The words value:
+            <input type="text" autocapitalize="words"/>
+        </label>
+        <br/><br/>
+        <label>
+            The characters value:
+            <input type="text" autocapitalize="characters"/>
+        </label>
+        <br/><br/>
+        <label>
+            Turning autocapitalize off:
+            <input type="text" autocapitalize="off"/>
+        </label> -->
+
+        <h2>Autofocus</h2>
+        <input type="text" autofocus/>
+
+        <h2>Disabled</h2>
+        <input type="text" value="I'm disable input." disabled/>
+        
+        <h2>Attribute Max</h2>
+        <form action="page-handler.html">
+            <input type="date" max="2021-3-31">
+            <input type="number" max="12"/>
+            <input type="submit"/>
+        </form>
+
+        <h2>Attribute Max Length</h2>
+        <label>
+            The input below only allows a maximun of five characters:
+            <input type="text" maxlength="5"/>
+        </label>
+        
+        <h2>Attribute Min Length</h2>
+        <label>
+            The input below only allows a minimal of five characters:
+            <input type="text" minlength="5"/>
+        </label>
+
+        <h2>Attribute Multiple</h2>
+        <p>The user can now select multiple files.</p>
+        <input type="file" multiple/>
+
+        <h2>Attribute Pattern</h2>
+        <p>Try to fill the text field with non-alphanumeric values.</p>
+        <form action="page-handler.html">      
+              <input type="text" pattern="[0-9]+"/>
+              <input type="submit"/>
+        </form>
+
+        <h2>Read Only</h2>
+        <textarea readonly>I'm read only textarea.</textarea>
+
+        <h2>Attribute Require</h2>
+        <p>Try submitting the form without input value.</p>
+        <form action="page-handler.html">
+            <input type="text" required/>
+            <input type="submit"/>
+        </form>
+
+        <h2>Attribute wrap</h2>
+        <label>
+            The hard value:
+            <!-- We need the cols attribute to take effect -->
+            <textarea cols="15" wrap="hard"></textarea>
+        </label>
+        <br/><br/>
+        <label>
+            The soft value:
+            <textarea wrap="soft"></textarea>
+        </label>
+
+    </body>
+</html>

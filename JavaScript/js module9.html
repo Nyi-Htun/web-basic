@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript Module - 9</title>
+    </head>
+    <body>
+        <h2>JS Dates</h2>
+        <p>The Date object allows us to work with dates</p>
+
+        <h2>The Date() Constructor</h2>
+        <!-- new Date() -->
+        <ul>
+            <li>new Date()</li>
+            <li>new Date(milliseconds)</li>
+            <li>new Date(dateString)</li>
+            <li>new Date(year,monthIndex,day,hours,minutes,seconds,milliseconds)</li>
+        </ul>
+
+        <h2>new Date()</h2>
+        <script>
+            function Break(){
+                document.write("<br>");
+            }
+
+            var date1 = new Date();
+            document.write(date1 + " date with new Date()");
+            Break();
+
+            var date2  = new Date(6923845029374);
+            document.write(date2 + " date with new Date(milliseconds)");
+            Break();
+
+            var date3  = new Date("June 04, 2000");
+            document.write(date3 + " date with new Date(dateString)");
+            Break();
+            //new Date(year,monthIndex,day,hours,minutes,seconds,milliseconds)
+            var date4  = new Date(2000,5,4,18,30,20,0);
+            document.write(date4 + " date with new Date(year,monthIndex,day,hours,minutes,seconds,milliseconds)");
+            
+        </script>
+
+        <h2>JS Date Formets</h2>
+        <ul>
+            <li>Short Date : "06/04/2000"</li>
+            <li>Long Date : "June 04 2000" or "Jun 04 2000"</li>
+            <li>ISO Date : "2000-06-04"</li>
+        </ul>
+
+        <h2>Short Date Format</h2>
+        <script>
+            var date = new Date("06/04/2000");
+            document.write(date + " short date format");
+            Break();
+        </script>
+
+        <h2>Long Date Format</h2>
+        <script>
+            // MM DD YYYY
+            // DD MM YYYY
+            // YYYY DD MM
+            var date = new Date("Oct 21 1999");
+            document.write(date + " long date format");
+            Break();
+        </script>
+
+        <h2>ISO Date Format</h2>
+        <script>
+            var date = new Date("2019-03-12");
+            document.write(date + " ISO date format");
+        </script>
+
+        <h2>JS Date Get Methods</h2>
+        <ul>
+            <li>Date.now()</li>
+            <li>Date.getFullYear()</li>
+            <li>Date.getMonth()</li>
+            <li>Date.getDate()</li>
+            <li>Date.getDay()</li>
+            <li>Date.getHours()</li>
+            <li>Date.getMinutes()</li>
+            <li>Date.getSeconds()</li>
+            <li>Date.getMilliseconds()</li>
+            <li>Date.getTime(givenDate)</li>
+        </ul>
+
+        <script>
+            function MakeHeading(title){
+                document.write("<h2>" + title + "</h2>");
+            }
+
+            MakeHeading("Date.now()");
+            var now = Date.now();
+            // milliseconds
+            document.write(now);
+            Break();
+
+            MakeHeading("Date.getFullYear()");
+            var date = new Date();
+            var year = date.getFullYear();
+            document.write(year);
+            Break();
+
+            MakeHeading("Date.getMonth()");
+            var month = date.getMonth();
+            document.write(month);
+            Break();
+            
+            MakeHeading("Date.getDate()");
+            var getCurrentDate = date.getDate();
+            document.write(getCurrentDate);
+            Break();
+
+            MakeHeading("Date.getDay()");
+            var day = date.getDate();
+            document.write(day);
+            Break();
+            
+            MakeHeading("Date.getHours()");
+            var Hours = date.getHours();
+            document.write(Hours);
+            Break();
+
+            MakeHeading("Date.getMinutes()");
+            var minutes= date.getMinutes();
+            document.write(minutes);
+            Break();
+
+            MakeHeading("Date.getSeconds()");
+            var seconds = date.getSeconds();
+            document.write(seconds);
+            Break();
+
+            MakeHeading("Date.getMilliseconds()");
+            var milliseconds = date.getMilliseconds();
+            document.write(milliseconds);
+            Break();
+
+            MakeHeading("Date.getTime(givenDate)");
+            var newDate = new Date("June 4 2000");
+            var newDateMillisecons = newDate.getTime(newDate);
+            document.write(newDateMillisecons);
+            Break();
+        </script>
+
+        <h2>JS Date Set Methods</h2>
+        <ul>
+            <li>Date.setTime()</li>
+            <li>Date.setFullYear()</li>
+            <li>Date.setMonth()</li>
+            <li>Date.setDate()</li>
+            <li>Date.setHours()</li>
+            <li>Date.setMinutes()</li>
+            <li>Date.setSeconds()</li>
+            <li>Date.setMilliseconds()</li>
+        </ul>
+
+        <script>
+            MakeHeading("Date.setTime() Method");
+            var date1 = new Date("Mar 21,2000");
+            var date2 = new Date();
+            date2.setTime(date1.getTime() + 876343453);
+            document.write(date2);
+
+            MakeHeading("Date.setFullYear() Method");
+            var date = new Date();
+            date.setFullYear("2000");
+            document.write(date);
+
+            MakeHeading("Date.setMonth() Method");
+            date.setMonth(8);
+            document.write(date);
+
+            MakeHeading("Date.setDate() Method");
+            date.setDate(7);
+            document.write(date);
+
+            MakeHeading("Date.setHours() Method");
+            date.setHours(01);
+            document.write(date);
+
+            MakeHeading("Date.setMinutes() Method");
+            date.setMinutes(45);
+            document.write(date);
+
+            MakeHeading("Date.setSeconds() Method");
+            date.setSeconds(50);
+            document.write(date);
+
+            MakeHeading("Date.setMilliseconds() Method");
+            date.setMilliseconds(450);
+            document.write(date.getMilliseconds());
+
+        </script>
+    </body>
+</html>

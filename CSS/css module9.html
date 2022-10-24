@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS Module - 9</title>
+        <style type="text/css">
+
+            .box-sizing{
+                width: 300px;
+                height: 300px;
+                padding: 40px;
+                border: 5px solid black;
+                background: yellow;
+            }
+
+            .content-box-demo{
+                box-sizing: content-box;
+            }
+
+            .border-box-demo{
+                box-sizing: border-box;
+            }
+
+            /* CSS for Container 1 */
+
+            .container1{
+                display: flex;
+                background: blue;
+                padding: 10px;
+            }
+
+            .container1 > div{
+                background: yellow;
+                width: 100px;
+                height: 100px;
+                margin: 5px;
+            }
+
+            /* CSS for Cntainer 2 */
+
+            .container2{
+                display: flex;
+                background: blue;
+                padding: 10px;
+                flex-direction: row-reverse;
+            }
+
+            .container2 > div{
+                background: yellow;
+                width: 100px;
+                height: 100px;
+                margin: 5px;
+            }
+
+            /* CSS for Container3 */
+
+            .container3{
+                display: flex;
+                background: blue;
+                padding: 10px;
+                flex-direction: row;
+                flex-wrap: wrap-reverse;
+            }
+
+            .container3 > div{
+                background: yellow;
+                width: 100px;
+                height: 100px;
+                margin: 5px;
+            }
+
+            /* CSS  for container 4 */
+            .container4{
+                display: flex;
+                background: blue;
+                padding: 10px;
+                /* flex-direction: row;
+                flex-wrap: wrap-reverse; */
+                flex-flow: row wrap-reverse;
+            }
+
+            .container4 > div{
+                background: yellow;
+                width: 100px;
+                height: 100px;
+                margin: 5px;
+            }
+
+            /* CSS for container 5 */
+
+            .container5{
+                display: flex;
+                justify-content: space-around;
+                background: blue;
+                padding: 5px;
+            }
+
+            .container5 > div{
+                width: 200px;
+                height: 200px;
+                background: yellow;
+                margin: 5px;
+            }
+
+            /* CSS for Container 6 */
+             
+            .container6{
+                display: flex;
+                align-items: center;
+                background: blue;
+                padding: 5px;
+                height: 500px;
+            }
+
+            .container6 > div{
+                background: yellow;
+                width: 200px;
+                line-height: 80px;
+                text-align: center;
+                margin: 5px;
+            }
+
+            /* CSS for Container 7 */
+            .container7{
+                display: flex;
+                flex-wrap: wrap;
+                background: blue;
+                padding: 5px;
+                height: 400px;
+                align-content: stretch;
+            }
+
+            .container7 > div{
+                background: yellow;
+                width: 100px;
+                line-height: 80px;
+                text-align: center;
+                margin: 5px;
+            }
+
+            /* CSS for Container 8 */
+            .container8{
+                display: flex;
+                flex-direction: row;
+                background: blue;
+                padding: 10px;
+            }
+
+            .container8 > div{
+                background: yellow;
+                width: 100px;
+                height: 100px;
+                margin: 5px;
+            }
+
+            /* CSS for Container 9 */
+
+            .container9{
+                display: flex;
+                background: blue;
+                padding: 10px;
+            }
+
+            .container9 > div{
+                background: yellow;
+                height: 100px;
+                margin: 5px;
+            }
+
+            /* CSS for container 10 */
+            .container10{
+                display: flex;
+                width: 700px;
+                background: blue;
+                padding: 10px;
+            }
+
+            .container10 > div{
+                background: yellow;
+                height: 100px;
+                /* Initial width of flex-item */
+                flex-basis: 200px;
+                margin: 5px;
+            }
+
+            /* CSS for container 11 */
+
+            .container11{
+                display: flex;
+                background: blue;
+                padding: 10px;
+            }
+
+            .container11 > div{
+                background: yellow;
+                height: 100px;
+                margin: 5px;
+            }
+
+            .box1{
+                /* flex-grow, flex-basic */
+                flex: 1 100px;
+            }
+
+            .box2{
+                flex: 2 100px;
+            }
+
+            .box3{
+                flex: 2 100px;
+            }
+
+            /* CSS for container 12 */
+
+            .container12{
+                display: flex;
+                align-items: flex-start;
+                background: blue;
+                padding: 5px;
+                height: 400px;
+            }
+
+            .container12 > div{
+                background: yellow;
+                width: 200px;
+                line-height: 80px;
+                text-align: center;
+                margin: 5px;
+            }
+
+            .flex-item-2{
+                align-self: stretch;
+            }
+
+            .flex-item-3{
+                align-self: flex-end;
+            }
+
+            /* CSS for Media Query */
+            @media screen and (min-width: 900px) {
+                body{
+                    background: green;
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <h2>Box Sizing</h2>
+        <ul>
+            <li>Content Box</li>
+            <li>Border Box</li>
+        </ul>
+
+        <div class="box-sizing content-box-demo">
+            Content Box Demo
+        </div>
+        <br>
+        <div class="box-sizing border-box-demo">
+            Border Box Demo
+        </div>
+
+        <h2>Flexible Boxes</h2>
+
+        <div class="container1">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+
+        <h2>Flex Direction</h2>
+        <ul>
+            <li>row</li>
+            <li>row-reverse</li>
+            <li>column</li>
+            <li>column-reverse</li>
+        </ul>
+
+        <div class="container2">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </div>
+
+        <h2>Flex Wrap</h2>
+        <ul>
+            <li>nowrap</li>
+            <li>wrap</li>
+            <li>wrap-reverse</li>
+        </ul>
+
+        <div class="container3">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </div>
+
+        <h2>Flex Flow</h2>
+        <!-- flex-flow (flex-direcrion + flex-wrap) -->
+        <div class="container4">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </div>
+        
+        <h2>Flex Justify Content</h2>
+        <!-- flex-start, flex-end, center, space-between, space-around, space-evenly -->
+        <div class="container5">
+            <div style="width: 20%">1</div>
+            <div style="width: 30%">2</div>
+            <div style="width: 20%">3</div>
+        </div>
+
+        <h2>Align Item Property</h2>
+        <!-- flex-start, flex-end, center,strech, baseline -->
+
+        <div class="container6">
+            <div style="font-size: 20px;">1</div>
+            <div style="font-size: 40px;">2</div>
+            <div style="font-size: 60px;">3</div>
+        </div>
+
+        <h2>Align Content Property</h2>
+        <div class="container7">
+            <div>1</div>        
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+        </div>
+
+        <h2>flex order property</h2>
+        <div class="container8">
+            <div style="order: 3;">1</div>
+            <div style="order: 4;">2</div>
+            <div style="order: 2;">3</div>
+            <div style="order: 1;">4</div>
+        </div>
+
+        <h2>Flex Grow</h2>
+        <div class="container9">
+            <div style="flex-grow: 1;">1</div>
+            <div style="flex-grow: 2;">2</div>
+            <div style="flex-grow: 3;">3</div>
+        </div>
+
+        <h2>Flex Shrink and Flex Basis</h2>
+        <div class="container10">
+            <div style="flex-shrink: 1;">1</div>     
+            <div style="flex-shrink: 1;">2</div>
+            <div style="flex-shrink: 2;">3</div>
+            <div style="flex-shrink: 3;">4</div>
+            <div style="flex-shrink: 1;">5</div>
+        </div>
+
+        <h2>Flex Property</h2>
+        <!-- (flex-grow + flex-shrink + flex-basis) -->
+        <div class="container11">
+            <div class="box1">box 1</div>
+            <div class="box2">box 2</div>
+            <div class="box3">box 3</div>
+        </div>
+
+        <h2>Flex Item Align Self</h2>
+        <!-- flex-start, flex-end, center, stretch, basline -->
+        <div class="container12">
+            <div>1</div>
+            <div class="flex-item-2">2</div>
+            <div class="flex-item-3">3</div>
+        </div>
+
+        <h2>Media Query</h2>
+        <!-- Codded in Header -->
+
+    </body>
+</html>

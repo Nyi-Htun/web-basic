@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS Module - 8</title>
+
+        <style type="text/css">
+
+            .without-transition{
+                width: 100px;
+                height: 100px;
+                background: black;
+            }
+
+            .with-transition{
+                width: 100px;
+                height: 100px;
+                background: black;
+                transition-property: width,height,background;
+                transition-duration: 5s;
+                /* transition: .5s; */
+            }
+
+            .tran:hover{
+                width: 200px;
+                height: 200px;
+                background: orange;
+            }
+
+            .tranTimingFun{
+                transition-timing-function: ease-in-out;
+                transition-property: width,height,background;
+                transition-duration: 2s;
+                width: 100px;
+                height: 100px;
+                background: yellowgreen;
+            }
+
+            .tranTimingFun:hover{
+                width: 200px;
+                height: 200px;
+                background: pink;
+            }
+
+            .tran-effect{
+                transition: margin-left ease-in-out 5s background;
+            }
+
+            .tran-short-hand{
+                width: 100px;
+                height: 100px;
+                background: black;
+                color: orangered;
+                /* margin-top: 0px; */
+                margin-left: 0px;
+            }
+
+            .tran-short-hand:hover{
+                /* margin-top: 200px; */
+                margin-left: 200px;
+                background: blue;
+            }
+
+            /* CSS for Animation demo */
+            @keyframes myAnimation{
+                /* from{
+                    background-color: gold;
+                    left: 0px;
+                }
+                to{
+                    background-color: green;
+                    left: 200px;
+                } */
+
+                0%{
+                    background-color: gold;
+                    top: 0px;
+                    left: 0px;              
+                  }
+
+                  25%{
+                    background-color: green;
+                    top: 200px;
+                    left: 200px;              
+                  }
+
+                50%{
+                    background-color: gold;
+                    top: 0px;
+                    left: 200px;              
+                  }
+
+                75%{
+                    background-color: rgb(43, 255, 0);
+                    top: 200px;
+                    left: 0px;              
+                  }
+
+                100%{
+                    background-color: rgb(251, 8, 162);
+                    top: 0px;
+                    left: 0px;              
+                  }
+            }
+
+            .animation-demo{
+                /* animation: myAnimation;
+                animation-duration: 2s;
+                animation-delay: 1s;
+                animation-timing-function: ease-in-out;
+                animation-iteration-count: infinite; */
+                animation-direction: alternate-reverse;
+                animation-fill-mode: none;
+                animation: myAnimation 2s 2s ease-in-out infinite;
+                position: relative;
+                width: 100px;
+                height: 100px;
+                background-color: gold;
+            }
+
+            /* CSS for Column Count */
+            .column-count-demo{
+                columns: 200px 3;
+                column-rule: 5px groove black;
+            }
+
+            .column-count-demo h3{
+                column-span: all;
+                text-align: center;
+                column-gap: 200px;
+            }
+
+            /* CSS for resize */
+            .horizontal{
+                resize: horizontal;
+            }
+
+            .vertical{
+                resize: vertical;
+            }
+
+            .both{
+                resize: both;
+            }
+
+            .resize-div{
+                padding: 50px;
+                border: 1px solid black;
+            }
+
+            /* CSS for outline offset */
+            .outline-offset{
+                outline: 3px solid blue;
+                border: 1px solid black;
+                outline-offset: 3px;
+                margin: 50px;
+                width: 100px;
+                height: 100px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h2>CSS 3 Transition</h2>
+
+        <h3>Without Transition</h3>
+        <div class="tran without-transition"></div>
+        <h2>With Transition</h2>
+        <div class="tran with-transition"></div>
+
+        <h2>Trnasition Timing Function</h2>
+        <ul>
+            <li>ease</li>
+            <li>linear</li>
+            <li>ease-in</li>
+            <li>ease-out</li>
+            <li>ease-in-out</li>
+        </ul>
+
+        <div class="tranTimingFun"></div>
+
+        <h2>Transition shortand</h2>
+        <div class="tran-short-hand tran-effect">I"m transition shorthand</div>
+
+        <h2>CSS3 Animation</h2>
+        <!-- @keyframe -->
+        <div class="animation-demo">hello</div>
+
+        <h2>CSS3 Multiple Columns</h2>
+        <ul>
+            <li>column-count</li>
+            <li>column-width</li>
+            <li>columns</li>
+            <li>column-gap</li>
+            <li>column-rule-style</li>
+            <li>column-rule-width</li>
+            <li>column-rule-color</li>
+            <li>column-rule</li>
+            <li>column-span</li>
+        </ul>
+
+        <h2>Colum Count</h2>
+        <div class="column-count-demo">
+            <h3>This is heading</h3>
+            This is a paragraph with column count2This is a paragraph with column count2This is a paragraph with column count2This is a paragraph with column count2This is a paragraph with column count2
+        </div>
+
+        <h2>CSS3 User Interface</h2>
+        <ul>
+            <li>resize</li>
+            <li>outline-offset</li>
+        </ul>
+
+        <!-- resize : none , horizontal , vertical , both -->
+        <div class="resize-div horizontal">
+            horizontally resize horiresizehorizontally resize horiresizehorizontally resize horiresizehorizontally resize horiresize
+        </div>
+        <div class="resize-div-vertical">
+            resize verticallyresize verticallyresize vertically
+        </div>
+        <div class="resize-div both">
+            resize bothresize bothresize bothresize bothresize bothresize both
+        </div>
+
+        <h2>Outline Offset</h2>
+        <div class="outline-offset">Outline Offset</div>
+
+        <div style="height: 500px;"></div>
+
+    </body>
+</html>
